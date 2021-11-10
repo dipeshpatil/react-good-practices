@@ -37,13 +37,14 @@ const DecideOrientationComponent = ({
 };
 
 const TextWithSideLabel = ({
+  size,
   textPlaceHolder,
   textRef,
   labelText,
   labelOrientation,
 }) => {
   return (
-    <InputGroup>
+    <InputGroup size={size ?? "md"}>
       <DecideOrientationComponent
         orientation={labelOrientation}
         placeholder={textPlaceHolder}
@@ -55,6 +56,7 @@ const TextWithSideLabel = ({
 };
 
 TextWithSideLabel.propTypes = {
+  size: PropTypes.string,
   textPlaceHolder: PropTypes.string,
   textRef: PropTypes.any,
   labelText: PropTypes.string,

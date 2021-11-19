@@ -3,6 +3,7 @@ import React, { PureComponent } from "react";
 import BasePage from "../../components/BasePage/BasePage";
 
 import TextWithSideLabel from "../../components/InputGroups/TextWithSideLabel/TextWithSideLabel";
+import SimpleListGroup from "../../components/ListGroups/SimpleListGroup/SimpleListGroup";
 import SimpleListGroupWithIconButton from "../../components/ListGroups/SimpleListGroupWithIconButton/SimpleListGroupWithIconButton";
 
 import "./HomePage.scss";
@@ -21,11 +22,13 @@ class HomePage extends PureComponent {
       <BasePage>
         <br />
         <SimpleListGroupWithIconButton
+          bootstrapIconClasses={["x-lg"]}
           variant="flush"
           iconButtonOrientation="end"
           handleIconClick={(listIdx) => alert(listItems[listIdx])}
           listData={listItems}
         />
+        <SimpleListGroup listData={listItems} />
         <TextWithSideLabel
           textPlaceHolder="Email Address"
           textRef={() => null}

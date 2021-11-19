@@ -11,6 +11,7 @@ const SimpleListGroupWithIconButton = ({
   listData = [],
   variant,
   handleIconClick,
+  bootstrapIconClasses = [],
   iconButtonOrientation,
   iconButtonAdditionalClasses = [],
 }) => {
@@ -36,7 +37,7 @@ const SimpleListGroupWithIconButton = ({
               iconButtonAdditionalClasses
             )}`}
           >
-            <i className="bi bi-x-lg" />
+            <i className={`bi bi-${clsx(bootstrapIconClasses)}`} />
           </span>
         </ListGroup.Item>
       ))}
@@ -48,6 +49,7 @@ SimpleListGroupWithIconButton.propTypes = {
   listData: PropTypes.array,
   variant: PropTypes.string,
   handleIconClick: PropTypes.func,
+  bootstrapIconClasses: PropTypes.array,
   iconButtonOrientation: PropTypes.string,
   iconButtonAdditionalClasses: PropTypes.array,
 };

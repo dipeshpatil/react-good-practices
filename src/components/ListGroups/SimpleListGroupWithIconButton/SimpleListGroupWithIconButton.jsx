@@ -9,11 +9,11 @@ const acceptedIconButtonOrientationValues = ["start", "left", "end", "right"];
 
 const SimpleListGroupWithIconButton = ({
   listData = [],
-  variant,
   handleIconClick,
   bootstrapIconClasses = [],
   iconButtonOrientation,
   iconButtonAdditionalClasses = [],
+  ...props
 }) => {
   const isValidOrientationValue = acceptedIconButtonOrientationValues.includes(
     iconButtonOrientation
@@ -27,7 +27,7 @@ const SimpleListGroupWithIconButton = ({
     : "right";
 
   return (
-    <ListGroup variant={variant}>
+    <ListGroup variant={props.variant}>
       {listData.map((listItem, listIdx) => (
         <ListGroup.Item key={listIdx}>
           {listItem}
@@ -47,7 +47,6 @@ const SimpleListGroupWithIconButton = ({
 
 SimpleListGroupWithIconButton.propTypes = {
   listData: PropTypes.array,
-  variant: PropTypes.string,
   handleIconClick: PropTypes.func,
   bootstrapIconClasses: PropTypes.array,
   iconButtonOrientation: PropTypes.string,

@@ -2,7 +2,7 @@ import PropTypes from "prop-types";
 
 import { Carousel } from "react-bootstrap";
 
-const SimpleImageCarousel = ({data = []}) => {
+const SimpleImageCarousel = ({ data = [] }) => {
   return (
     <Carousel variant="light">
       {data.map((carousel, idx) => {
@@ -28,7 +28,7 @@ const SimpleImageCarousel = ({data = []}) => {
 };
 
 SimpleImageCarousel.propTypes = {
-  data: PropTypes.array 
+  data: PropTypes.array,
 };
 
 export default SimpleImageCarousel;

@@ -2,13 +2,12 @@ import React, { PureComponent } from "react";
 
 import BasePage from "../../components/BasePage/BasePage";
 
-import TextWithSideLabel from "../../components/InputGroups/TextWithSideLabel/TextWithSideLabel";
-import SimpleListGroup from "../../components/ListGroups/SimpleListGroup/SimpleListGroup";
-import SimpleListGroupWithIconButton from "../../components/ListGroups/SimpleListGroupWithIconButton/SimpleListGroupWithIconButton";
+import Header from "../../components/Header/Header";
+import SimpleImageCarousel from "../../components/Carousels/SimpleImageCarousel";
+
+import carouselData from "../../data/carousel_data.json";
 
 import "./HomePage.scss";
-
-const listItems = ["Item 1", "Item 2", "Item 3", "Item 4", "Item 5"];
 
 class HomePage extends PureComponent {
   constructor(props) {
@@ -19,22 +18,9 @@ class HomePage extends PureComponent {
 
   render() {
     return (
-      <BasePage>
-        <br />
-        <SimpleListGroupWithIconButton
-          bootstrapIconClasses={["x-lg"]}
-          variant="flush"
-          iconButtonOrientation="end"
-          handleIconClick={(listIdx) => alert(listItems[listIdx])}
-          listData={listItems}
-        />
-        <SimpleListGroup listData={listItems} />
-        <TextWithSideLabel
-          textPlaceHolder="Email Address"
-          textRef={() => null}
-          labelText="someone@example.com"
-          labelOrientation="end"
-        />
+      <BasePage useContainer={false}>
+        <SimpleImageCarousel data={carouselData}/>
+        <Header text="Home Page" additionalClasses={["text-center"]} />
       </BasePage>
     );
   }

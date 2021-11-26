@@ -19,7 +19,7 @@ class HomePage extends PureComponent {
   render() {
     return (
       <BasePage useContainer={false}>
-        <SimpleImageCarousel data={carouselData}/>
+        <SimpleImageCarousel data={carouselData} />
         <Header text="Home Page" additionalClasses={["text-center"]} />
       </BasePage>
     );

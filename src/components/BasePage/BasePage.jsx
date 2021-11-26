@@ -29,9 +29,7 @@ const BasePage = ({
       {useContainer ?? true ? (
         <Container fluid={fluidContainer ?? true}>{children}</Container>
       ) : (
-        <div>
-          {children}
-        </div>
+        <div>{children}</div>
       )}
     </>
   );

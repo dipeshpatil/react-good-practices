@@ -1,0 +1,34 @@
+import PropTypes from "prop-types";
+
+import { Carousel } from "react-bootstrap";
+
+const SimpleImageCarousel = ({data = []}) => {
+  return (
+    <Carousel variant="light">
+      {data.map((carousel, idx) => {
+        return (
+          <Carousel.Item key={idx}>
+            <img
+              className="d-block w-100"
+              src={carousel.url}
+              alt={carousel.alt}
+            />
+
+            {carousel.text && (
+              <Carousel.Caption>
+                <h5>{carousel.text}</h5>
+                {carousel.subText && <p>{carousel.subText}</p>}
+              </Carousel.Caption>
+            )}
+          </Carousel.Item>
+        );
+      })}
+    </Carousel>
+  );
+};
+
+SimpleImageCarousel.propTypes = {
+  data: PropTypes.array 
+};
+
+export default SimpleImageCarousel;

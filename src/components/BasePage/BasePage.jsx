@@ -5,9 +5,14 @@ import { Container } from "react-bootstrap";
 
 import NavBar from "../NavBar/NavBar";
 
-import navBarLinks from "./../../config/navbar_links";
+import navBarLinks from "./../../data/navbar_data";
 
-const BasePage = ({ fluidContainer, excludeNavbar, children }) => {
+const BasePage = ({
+  fluidContainer,
+  excludeNavbar,
+  children,
+  useContainer,
+}) => {
   return (
     <>
       {(excludeNavbar ?? true) && (
@@ -15,12 +20,19 @@ const BasePage = ({ fluidContainer, excludeNavbar, children }) => {
           navBarOptions={{
             variant: "dark",
             background: "dark",
-            title: "React App",
+            title: "IMPRIMO",
+            orientation: "end",
           }}
           links={navBarLinks}
         />
       )}
-      <Container fluid={fluidContainer ?? true}>{children}</Container>
+      {useContainer ?? true ? (
+        <Container fluid={fluidContainer ?? true}>{children}</Container>
+      ) : (
+        <div>
+          {children}
+        </div>
+      )}
     </>
   );
 };
@@ -29,6 +41,7 @@ BasePage.propTypes = {
   fluidContainer: PropTypes.bool,
   excludeNavbar: PropTypes.bool,
   children: PropTypes.any,
+  useContainer: PropTypes.bool,
 };
 
 export default BasePage;

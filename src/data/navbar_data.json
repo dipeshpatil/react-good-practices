@@ -2,16 +2,16 @@
   {
     "id": 1,
     "name": "Home",
-    "path": "/home"
+    "path": "/react-good-practices/home"
   },
   {
     "id": 2,
     "name": "About",
-    "path": "/about"
+    "path": "/react-good-practices/about"
   },
   {
     "id": 3,
     "name": "Contact",
-    "path": "/contact"
+    "path": "/react-good-practices/contact"
   }
 ]

@@ -1,0 +1,32 @@
+[
+  {
+    "id": 1,
+    "itemName": "Request A Demo",
+    "iconURL": "https://cdn-icons-png.flaticon.com/512/4341/4341029.png"
+  },
+  {
+    "id": 2,
+    "itemName": "Book A Service",
+    "iconURL": "https://cdn-icons-png.flaticon.com/512/4341/4341066.png"
+  },
+  {
+    "id": 3,
+    "itemName": "Product Exchange",
+    "iconURL": "https://cdn-icons-png.flaticon.com/512/4341/4341087.png"
+  },
+  {
+    "id": 4,
+    "itemName": "Special Offers",
+    "iconURL": "https://cdn-icons-png.flaticon.com/512/4341/4341044.png"
+  },
+  {
+    "id": 5,
+    "itemName": "Rental Services",
+    "iconURL": "https://cdn-icons-png.flaticon.com/512/4341/4341131.png"
+  },
+  {
+    "id": 6,
+    "itemName": "Raise An Issue",
+    "iconURL": "https://cdn-icons-png.flaticon.com/512/4341/4341152.png"
+  }
+]

@@ -1,0 +1,46 @@
+$dockItemsWrapperBackgroundColor: #ededed;
+$dockItemsWrapperHoverBackgroundColor: #cac9c9;
+$dockTitleColor: #222f3e;
+$dockTitleHoverColor: #ea2027;
+
+.vertical__dock {
+  padding: 20px;
+  text-align: center !important;
+  justify-content: center;
+  align-items: center;
+
+  &-wrapper {
+    background-color: $dockItemsWrapperBackgroundColor;
+    border-radius: 5px;
+    margin-top: 10px;
+    padding: 10px;
+
+    &-icon {
+      width: 60%;
+    }
+
+    &-title {
+      font-size: 15px;
+      margin-top: 10px;
+      display: block;
+      color: $dockTitleColor;
+    }
+
+    &:hover {
+      transition: 0.3s all;
+      background-color: $dockItemsWrapperHoverBackgroundColor;
+      cursor: pointer;
+
+      .vertical__dock-wrapper-icon {
+        transform: scale3d(0.85, 0.85, 0.85);
+        transition: 0.3s all;
+        filter: sepia(0.5);
+      }
+      .vertical__dock-wrapper-title {
+        font-size: 16px;
+        transition: 0.3s all;
+        color: $dockTitleHoverColor;
+      }
+    }
+  }
+}

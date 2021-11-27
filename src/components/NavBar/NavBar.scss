@@ -10,7 +10,7 @@ $colorLight: #f0f0f0;
   color: $colorDark;
   &:hover {
     transition: 0.3s all;
-    color: lighten($colorDark, 30%)
+    color: lighten($colorDark, 30%);
   }
 }
 
@@ -18,6 +18,6 @@ $colorLight: #f0f0f0;
   color: $colorLight;
   &:hover {
     transition: 0.3s all;
-    color: darken($colorLight, 30%)
+    color: darken($colorLight, 30%);
   }
 }

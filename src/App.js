@@ -12,9 +12,9 @@ function App() {
     <div className="App">
       <Routes>
         <Route exact path="/" element={<HomePage />} />
-        <Route exact path="/react-good-practices/home" element={<HomePage />} />
-        <Route exact path="/react-good-practices/about" element={<AboutPage />} />
-        <Route exact path="/react-good-practices/contact" element={<ContactPage />} />
+        <Route exact path="/home" element={<HomePage />} />
+        <Route exact path="/about" element={<AboutPage />} />
+        <Route exact path="/contact" element={<ContactPage />} />
       </Routes>
     </div>
   );

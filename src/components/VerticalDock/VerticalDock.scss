@@ -20,7 +20,7 @@ $dockTitleHoverColor: #ea2027;
     }
 
     &-title {
-      font-size: 15px;
+      font-size: 16px;
       margin-top: 10px;
       display: block;
       color: $dockTitleColor;
@@ -37,7 +37,6 @@ $dockTitleHoverColor: #ea2027;
         filter: sepia(0.5);
       }
       .vertical__dock-wrapper-title {
-        font-size: 16px;
         transition: 0.3s all;
         color: $dockTitleHoverColor;
       }

@@ -1,10 +1,9 @@
 $dockItemsWrapperBackgroundColor: #ededed;
-$dockItemsWrapperHoverBackgroundColor: #cac9c9;
 $dockTitleColor: #222f3e;
 $dockTitleHoverColor: #ea2027;
 
 .vertical__dock {
-  padding: 20px;
+  padding: 15px;
   text-align: center !important;
   justify-content: center;
   align-items: center;
@@ -28,7 +27,7 @@ $dockTitleHoverColor: #ea2027;
 
     &:hover {
       transition: 0.3s all;
-      background-color: $dockItemsWrapperHoverBackgroundColor;
+      background-color: darken($dockItemsWrapperBackgroundColor, 15%);
       cursor: pointer;
 
       .vertical__dock-wrapper-icon {

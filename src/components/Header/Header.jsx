@@ -7,7 +7,7 @@ const DEFAULT_HEADER_CLASS = ["roboto"];
 
 const Header = ({ text, size = 1, additionalClasses = [] }) => {
   const headerClasses = clsx([...DEFAULT_HEADER_CLASS, ...additionalClasses]);
-  
+
   switch (parseInt(size)) {
     case 6:
       return <h6 className={headerClasses}>{text}</h6>;

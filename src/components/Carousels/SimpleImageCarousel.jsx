@@ -1,6 +1,6 @@
 import PropTypes from "prop-types";
 
-import { Carousel } from "react-bootstrap";
+import { Carousel, Image } from "react-bootstrap";
 
 const SimpleImageCarousel = ({ data = [] }) => {
   return (
@@ -8,7 +8,7 @@ const SimpleImageCarousel = ({ data = [] }) => {
       {data.map((carousel, idx) => {
         return (
           <Carousel.Item key={idx}>
-            <img
+            <Image
               className="d-block w-100"
               src={carousel.url}
               alt={carousel.alt}

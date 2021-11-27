@@ -18,8 +18,8 @@ const BasePage = ({
       {(excludeNavbar ?? true) && (
         <NavBar
           navBarOptions={{
-            variant: "dark",
-            background: "dark",
+            variant: "light",
+            background: "light",
             title: "IMPRIMO",
             orientation: "end",
           }}

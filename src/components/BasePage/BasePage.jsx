@@ -20,7 +20,7 @@ const BasePage = ({
           navBarOptions={{
             variant: "light",
             background: "light",
-            title: "IMPRIMO",
+            title: "Navbar",
             orientation: "end",
           }}
           links={navBarLinks}

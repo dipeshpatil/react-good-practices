@@ -1,7 +1,10 @@
 import React from "react";
 import PropTypes from "prop-types";
+import { NavLink } from "react-router-dom";
 
 import { Navbar, Container, Nav } from "react-bootstrap";
+
+import "./NavBar.scss";
 
 const DEFAULT = {
   variant: "light",
@@ -32,9 +35,13 @@ const NavBar = ({ links = [], navBarOptions = DEFAULT }) => {
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className={navbarOrientation}>
             {links.map((link) => (
-              <Nav.Link key={link.id} href={link.path}>
+              <NavLink
+                className={`nav_link nav_link-${variant}`}
+                key={link.id}
+                to={link.path}
+              >
                 {link.name}
-              </Nav.Link>
+              </NavLink>
             ))}
           </Nav>
         </Navbar.Collapse>

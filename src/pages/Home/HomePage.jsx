@@ -7,7 +7,7 @@ import VerticalDock from "../../components/VerticalDock/VerticalDock";
 
 // Data
 import carouselData from "../../data/carousel_data.json";
-import verticalDockData from "../../data/vertical_dock_data.json"
+import verticalDockData from "../../data/vertical_dock_data.json";
 
 import "./HomePage.scss";
 

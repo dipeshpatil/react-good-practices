@@ -1,5 +1,5 @@
 import React from "react";
-import { Routes, Route } from "react-router-dom";
+import { Route } from "react-router-dom";
 
 import HomePage from "./pages/Home/HomePage";
 import AboutPage from "./pages/About/AboutPage";
@@ -7,17 +7,20 @@ import ContactPage from "./pages/Contact/ContactPage";
 
 import "./App.scss";
 
-function App() {
-  return (
-    <div className="App">
-      <Routes>
-        <Route exact path="/" element={<HomePage />} />
-        <Route exact path="/home" element={<HomePage />} />
-        <Route exact path="/about" element={<AboutPage />} />
-        <Route exact path="/contact" element={<ContactPage />} />
-      </Routes>
-    </div>
-  );
-}
+export default class App extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {};
+  }
 
-export default App;
+  render() {
+    return (
+      <div>
+        <Route exact path="/" component={HomePage} />
+        <Route path="/home" component={HomePage} />
+        <Route path="/about" component={AboutPage} />
+        <Route path="/contact" component={ContactPage} />
+      </div>
+    );
+  }
+}

@@ -1,3 +1,4 @@
+import React from 'react';
 import PropTypes from "prop-types";
 
 import { Container, Row, Col, Image } from "react-bootstrap";
@@ -54,7 +55,7 @@ const VerticalDock = ({ data = [], dockOptions = DEFAULT_OPTIONS }) => {
 
 Dock.propTypes = {
   data: PropTypes.array,
-  options: PropTypes.object
+  options: PropTypes.object,
 };
 
 VerticalDock.propTypes = {

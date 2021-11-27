@@ -1,0 +1,23 @@
+$colorDark: #212121;
+$colorLight: #f0f0f0;
+
+.nav_link {
+  padding: 7px;
+  text-decoration: none;
+}
+
+.nav_link-light {
+  color: $colorDark;
+  &:hover {
+    transition: 0.3s all;
+    color: lighten($colorDark, 30%)
+  }
+}
+
+.nav_link-dark {
+  color: $colorLight;
+  &:hover {
+    transition: 0.3s all;
+    color: darken($colorLight, 30%)
+  }
+}

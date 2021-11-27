@@ -2,7 +2,6 @@ import PropTypes from "prop-types";
 
 import { Container, Row, Col, Image } from "react-bootstrap";
 
-import dockData from "../../data/vertical_dock_data.json";
 import "./VerticalDock.scss";
 
 const DEFAULT_OPTIONS = {
@@ -41,23 +40,25 @@ const Dock = ({ data = [], options = DEFAULT_OPTIONS }) => {
   );
 };
 
-const VerticalDock = ({ dockOptions = DEFAULT_OPTIONS }) => {
+const VerticalDock = ({ data = [], dockOptions = DEFAULT_OPTIONS }) => {
   const { useContainer, fluidContainer } = dockOptions;
 
   return useContainer ?? DEFAULT_OPTIONS.useContainer ? (
     <Container fluid={fluidContainer ?? DEFAULT_OPTIONS.fluidContainer}>
-      <Dock data={dockData} options={dockOptions} />
+      <Dock data={data} options={dockOptions} />
     </Container>
   ) : (
-    <Dock data={dockData} options={dockOptions} />
+    <Dock data={data} options={dockOptions} />
   );
 };
 
 Dock.propTypes = {
   data: PropTypes.array,
+  options: PropTypes.object
 };
 
 VerticalDock.propTypes = {
+  data: PropTypes.array,
   dockOptions: PropTypes.object,
 };
 

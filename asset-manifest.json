@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/react-good-practices/static/css/main.169f1150.chunk.css",
-    "main.js": "/react-good-practices/static/js/main.86ef8558.chunk.js",
-    "main.js.map": "/react-good-practices/static/js/main.86ef8558.chunk.js.map",
+    "main.js": "/react-good-practices/static/js/main.a217bd5a.chunk.js",
+    "main.js.map": "/react-good-practices/static/js/main.a217bd5a.chunk.js.map",
     "runtime-main.js": "/react-good-practices/static/js/runtime-main.10b5702b.js",
     "runtime-main.js.map": "/react-good-practices/static/js/runtime-main.10b5702b.js.map",
     "static/js/2.8b1f4034.chunk.js": "/react-good-practices/static/js/2.8b1f4034.chunk.js",
@@ -17,6 +17,6 @@
     "static/js/runtime-main.10b5702b.js",
     "static/js/2.8b1f4034.chunk.js",
     "static/css/main.169f1150.chunk.css",
-    "static/js/main.86ef8558.chunk.js"
+    "static/js/main.a217bd5a.chunk.js"
   ]
 }

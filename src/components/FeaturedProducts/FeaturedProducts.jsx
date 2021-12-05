@@ -15,10 +15,10 @@ const FeaturedProducts = () => {
     <Container className="mt-3">
       <Header
         size={1}
-        additionalClasses={["text-start", "readex-pro", "readex-pro__medium"]}
+        additionalClasses={["text-center", "readex-pro", "readex-pro__medium"]}
       >
         <i class="bi bi-arrow-left"></i>
-        &nbsp;Featured Products&nbsp;
+        &nbsp; Featured Products &nbsp;
         <i class="bi bi-arrow-right"></i>
       </Header>
       <Row className="mt-3">
@@ -45,7 +45,18 @@ const FeaturedProducts = () => {
             />
           </center>
         </Col>
-        <Col className="readex-pro featured-product-info px-4 py-3" sm={8}>
+        <Col className="readex-pro featured-product-info px-4" sm={8}>
+          <Header
+            size={2}
+            additionalClasses={[
+              "text-start",
+              "readex-pro",
+              "readex-pro__medium",
+              "mt-3"
+            ]}
+          >
+            {featuredProductInfo.title}
+          </Header>
           {featuredProductInfo.description}
         </Col>
       </Row>

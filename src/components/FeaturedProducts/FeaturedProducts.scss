@@ -1,0 +1,27 @@
+.scrollmenu {
+  white-space: nowrap;
+  overflow: auto;
+
+  .h-scroll {
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+  }
+}
+
+.featured-product {
+  width: 80%;
+  border-radius: 5px;
+}
+
+.featured-product-image {
+  width: 90%;
+  border-radius: 6px;
+  text-align: center;
+}
+
+.featured-product-info {
+  font-size: 17px;
+  text-align: justify;
+}

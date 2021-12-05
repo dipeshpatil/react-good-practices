@@ -7,27 +7,35 @@ import NavBar from "../NavBar/NavBar";
 
 import navBarLinks from "./../../data/navbar_data";
 
-const BasePage = ({
-  fluidContainer,
-  excludeNavbar,
-  children,
-  useContainer,
-}) => {
+const DEFAULT_OPTIONS = {
+  fluidContainer: true,
+  excludeNavbar: false,
+  useContainer: true,
+
+  navBarOptions: {
+    variant: "light",
+    background: "light",
+    title: "Navbar",
+    orientation: "start",
+  },
+};
+
+const BasePage = ({ children, pageOptions = DEFAULT_OPTIONS }) => {
+  const { excludeNavbar, fluidContainer, useContainer, navBarOptions } =
+    pageOptions;
+
   return (
     <>
-      {(excludeNavbar ?? true) && (
+      {!(excludeNavbar ?? DEFAULT_OPTIONS.excludeNavbar) && (
         <NavBar
-          navBarOptions={{
-            variant: "light",
-            background: "light",
-            title: "Navbar",
-            orientation: "end",
-          }}
+          navBarOptions={navBarOptions ?? DEFAULT_OPTIONS.navBarOptions}
           links={navBarLinks}
         />
       )}
-      {useContainer ?? true ? (
-        <Container fluid={fluidContainer ?? true}>{children}</Container>
+      {useContainer ?? DEFAULT_OPTIONS.useContainer ? (
+        <Container fluid={fluidContainer ?? DEFAULT_OPTIONS.fluidContainer}>
+          {children}
+        </Container>
       ) : (
         <div>{children}</div>
       )}
@@ -36,10 +44,8 @@ const BasePage = ({
 };
 
 BasePage.propTypes = {
-  fluidContainer: PropTypes.bool,
-  excludeNavbar: PropTypes.bool,
   children: PropTypes.any,
-  useContainer: PropTypes.bool,
+  pageOptions: PropTypes.object,
 };
 
 export default BasePage;

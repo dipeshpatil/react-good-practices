@@ -17,6 +17,7 @@ const ALLOWED_NAVBAR_DIRECTIONS = ["start", "left", "end", "right"];
 
 const NavBar = ({ links = [], navBarOptions = DEFAULT }) => {
   const { variant, title, background, orientation } = navBarOptions;
+  console.log(navBarOptions);
   const navbarOrientation = ALLOWED_NAVBAR_DIRECTIONS.slice(0, 2).includes(
     orientation ?? DEFAULT.orientation
   )
@@ -30,10 +31,12 @@ const NavBar = ({ links = [], navBarOptions = DEFAULT }) => {
       expand="lg"
     >
       <Container>
-        <Navbar.Brand href="/">{title ?? DEFAULT.title}</Navbar.Brand>
+        <Navbar.Brand href="/" className="oswald oswald__semi-bold">
+          {title ?? DEFAULT.title}
+        </Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
-          <Nav className={navbarOrientation}>
+          <Nav className={`${navbarOrientation} readex-pro`}>
             {links.map((link) => (
               <NavLink
                 className={`nav_link nav_link-${variant}`}

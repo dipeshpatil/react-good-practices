@@ -1,8 +1,41 @@
 @import "~bootstrap/scss/bootstrap";
 @import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.1/font/bootstrap-icons.css");
+
+// Roboto
 @import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+
+// Oswald
+@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@400;600&display=swap");
+
+// Readex Pro
+@import url("https://fonts.googleapis.com/css2?family=Readex+Pro:wght@400;500;600;700&display=swap");
 
 html,
 body {
   font-family: "Roboto", sans-serif !important;
+}
+
+.oswald {
+  font-family: "Oswald", sans-serif !important;
+
+  &__semi-bold {
+    font-weight: 600;
+  }
+}
+
+.readex-pro {
+  font-family: "Readex Pro", sans-serif !important;
+  font-weight: 400;
+
+  &__medium {
+    font-weight: 500;
+  }
+
+  &__semi-bold {
+    font-weight: 600;
+  }
+
+  &__bold {
+    font-weight: 700;
+  }
 }

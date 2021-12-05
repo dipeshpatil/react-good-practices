@@ -52,7 +52,7 @@ const FeaturedProducts = () => {
               "text-start",
               "readex-pro",
               "readex-pro__medium",
-              "mt-3"
+              "mt-3",
             ]}
           >
             {featuredProductInfo.title}

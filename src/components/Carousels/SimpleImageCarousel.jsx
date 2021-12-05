@@ -5,7 +5,7 @@ import { Carousel, Image } from "react-bootstrap";
 
 const SimpleImageCarousel = ({ data = [] }) => {
   return (
-    <Carousel variant="light">
+    <Carousel variant="light" indicators={false} as="slide">
       {data.map((carousel, idx) => {
         return (
           <Carousel.Item key={idx}>

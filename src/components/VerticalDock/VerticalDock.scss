@@ -8,11 +8,19 @@ $dockTitleHoverColor: #ea2027;
   justify-content: center;
   align-items: center;
 
+  &-dark {
+    background-color: #161616;
+  }
+
   &-wrapper {
     background-color: $dockItemsWrapperBackgroundColor;
     border-radius: 5px;
     margin-top: 10px;
     padding: 10px;
+
+    &-dark {
+      background-color: #212121;
+    }
 
     &-icon {
       width: 50%;
@@ -23,12 +31,20 @@ $dockTitleHoverColor: #ea2027;
       margin-top: 10px;
       display: block;
       color: $dockTitleColor;
+
+      &-dark {
+        color: #f0f0f0;
+      }
     }
 
     &:hover {
       transition: 0.3s all;
       background-color: darken($dockItemsWrapperBackgroundColor, 15%);
       cursor: pointer;
+
+      &-dark {
+        background-color: darken($dockItemsWrapperBackgroundColor, 35%);
+      }
 
       .vertical__dock-wrapper-icon {
         transform: scale3d(0.85, 0.85, 0.85);

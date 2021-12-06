@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import clsx from "clsx";
 import { Container, Row, Col, Image } from "react-bootstrap";
 
 import Header from "../Header/Header";
@@ -6,16 +7,23 @@ import Header from "../Header/Header";
 import featuredProductsData from "../../data/featured_products_data.json";
 import "./FeaturedProducts.scss";
 
+const isDark = JSON.parse(localStorage.isDark);
+
 const FeaturedProducts = () => {
   const [featuredProductInfo, setFeaturedProductInfo] = useState(
     featuredProductsData[0]
   );
 
   return (
-    <Container className="mt-3">
+    <Container className={clsx([isDark && "bg-dark", "mt-3"])}>
       <Header
         size={1}
-        additionalClasses={["text-center", "readex-pro", "readex-pro__medium"]}
+        additionalClasses={[
+          "text-center",
+          "readex-pro",
+          "readex-pro__medium",
+          isDark && "text-light",
+        ]}
       >
         <i class="bi bi-arrow-left"></i>
         &nbsp; Featured Products &nbsp;
@@ -45,7 +53,16 @@ const FeaturedProducts = () => {
             />
           </center>
         </Col>
-        <Col className="readex-pro featured-product-info px-4" sm={8}>
+        <Col
+          className={clsx([
+            "readex-pro",
+            "featured-product-info",
+            "px-4",
+            "mt-3",
+            isDark && "text-light",
+          ])}
+          sm={8}
+        >
           <Header
             size={2}
             additionalClasses={[

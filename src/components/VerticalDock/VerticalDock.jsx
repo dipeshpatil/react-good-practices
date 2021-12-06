@@ -1,9 +1,12 @@
 import React from "react";
+import clsx from "clsx";
 import PropTypes from "prop-types";
 
 import { Container, Row, Col, Image } from "react-bootstrap";
 
 import "./VerticalDock.scss";
+
+const isDark = JSON.parse(localStorage.isDark);
 
 const DEFAULT_OPTIONS = {
   useContainer: true,
@@ -15,7 +18,7 @@ const DEFAULT_OPTIONS = {
 const Dock = ({ data = [], options = DEFAULT_OPTIONS }) => {
   const { desktopColSpacing, mobileColSpacing } = options;
   return (
-    <Row className="vertical__dock">
+    <Row className={clsx(["vertical__dock", isDark && "vertical__dock-dark"])}>
       {data.map((item) => {
         return (
           <Col
@@ -25,12 +28,22 @@ const Dock = ({ data = [], options = DEFAULT_OPTIONS }) => {
             }`}
             sm={desktopColSpacing ?? DEFAULT_OPTIONS.desktopColSpacing}
           >
-            <div className="vertical__dock-wrapper">
+            <div
+              className={clsx([
+                "vertical__dock-wrapper",
+                isDark && "vertical__dock-wrapper-dark",
+              ])}
+            >
               <Image
                 className="vertical__dock-wrapper-icon"
                 src={item.iconURL}
               />
-              <span className="vertical__dock-wrapper-title">
+              <span
+                className={clsx([
+                  "vertical__dock-wrapper-title",
+                  isDark && "vertical__dock-wrapper-title-dark",
+                ])}
+              >
                 {item.itemName}
               </span>
             </div>

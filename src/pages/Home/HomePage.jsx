@@ -12,13 +12,15 @@ import verticalDockData from "../../data/vertical_dock_data.json";
 
 import "./HomePage.scss";
 
+const isDark = JSON.parse(localStorage.isDark);
+
 const homePageOptions = {
   fluidContainer: true,
   useContainer: false,
 
   navBarOptions: {
-    variant: "light",
-    background: "light",
+    variant: isDark ? "dark" : "light",
+    background: isDark ? "dark" : "light",
     title: "IMPRIMEX",
     orientation: "end",
   },

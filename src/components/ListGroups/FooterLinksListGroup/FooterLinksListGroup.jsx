@@ -4,7 +4,7 @@ import clsx from "clsx";
 
 import "./FooterLinksListGroup.scss";
 
-const isDark = JSON.parse(localStorage.isDark);
+const isDark = JSON.parse(localStorage.isDark ?? null) || false;
 
 const DispatchListGroupType = ({ children, type }) => {
   const allowedTypes = ["ordered", "unordered"];

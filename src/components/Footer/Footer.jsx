@@ -9,7 +9,7 @@ import footerData from "../../data/footer_data.json";
 
 import "./Footer.scss";
 
-const isDark = JSON.parse(localStorage.isDark);
+const isDark = JSON.parse(localStorage.isDark ?? null) || false;
 
 const footerLinksSequence = [
   "products",

@@ -12,7 +12,7 @@ import verticalDockData from "../../data/vertical_dock_data.json";
 
 import "./HomePage.scss";
 
-const isDark = JSON.parse(localStorage.isDark);
+const isDark = JSON.parse(localStorage.isDark ?? null) || false;
 
 const homePageOptions = {
   fluidContainer: true,

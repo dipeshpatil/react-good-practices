@@ -11,7 +11,7 @@ import aboutPageData from "../../data/about_page_data.json";
 
 import "./AboutPage.scss";
 
-const isDark = JSON.parse(localStorage.isDark);
+const isDark = JSON.parse(localStorage.isDark ?? null) || false;
 
 const aboutPageOptions = {
   fluidContainer: false,

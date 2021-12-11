@@ -15,6 +15,11 @@ const DEFAULT = {
 
 const ALLOWED_NAVBAR_DIRECTIONS = ["start", "left", "end", "right"];
 
+const toggleDarkMode = () => {
+  const isDark = JSON.parse(localStorage.isDark);
+  localStorage.isDark = !isDark;
+};
+
 const NavBar = ({ links = [], navBarOptions = DEFAULT }) => {
   const { variant, title, background, orientation } = navBarOptions;
   console.log(navBarOptions);
@@ -31,7 +36,11 @@ const NavBar = ({ links = [], navBarOptions = DEFAULT }) => {
       expand="lg"
     >
       <Container>
-        <Navbar.Brand href="/" className="oswald oswald__semi-bold">
+        <Navbar.Brand
+          href="#"
+          onClick={() => toggleDarkMode()}
+          className="oswald oswald__semi-bold"
+        >
           {title ?? DEFAULT.title}
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />

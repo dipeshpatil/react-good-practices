@@ -6,7 +6,7 @@ import { Container, Row, Col, Image } from "react-bootstrap";
 
 import "./VerticalDock.scss";
 
-const isDark = JSON.parse(localStorage.isDark);
+const isDark = JSON.parse(localStorage.isDark ?? null) || false;
 
 const DEFAULT_OPTIONS = {
   useContainer: true,

@@ -7,7 +7,7 @@ import Header from "../Header/Header";
 import featuredProductsData from "../../data/featured_products_data.json";
 import "./FeaturedProducts.scss";
 
-const isDark = JSON.parse(localStorage.isDark);
+const isDark = JSON.parse(localStorage.isDark ?? null) || false;
 
 const FeaturedProducts = () => {
   const [featuredProductInfo, setFeaturedProductInfo] = useState(

@@ -16,7 +16,7 @@ const DEFAULT = {
 const ALLOWED_NAVBAR_DIRECTIONS = ["start", "left", "end", "right"];
 
 const toggleDarkMode = () => {
-  const isDark = JSON.parse(localStorage.isDark);
+  const isDark = JSON.parse(localStorage.isDark ?? null) || false;
   localStorage.isDark = !isDark;
 };
 

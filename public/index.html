@@ -41,7 +41,7 @@
     -->
   </body>
   <script>
-    const isDark = JSON.parse(localStorage.isDark);
+    const isDark = JSON.parse(localStorage.isDark ?? null) || false;
     if (isDark) {
       document.getElementById("root").classList.add("bg-dark");
     }

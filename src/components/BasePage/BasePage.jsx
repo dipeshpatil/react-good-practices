@@ -4,6 +4,7 @@ import PropTypes from "prop-types";
 import { Container } from "react-bootstrap";
 
 import NavBar from "../NavBar/NavBar";
+import Footer from "../Footer/Footer";
 
 import navBarLinks from "./../../data/navbar_data";
 
@@ -39,6 +40,7 @@ const BasePage = ({ children, pageOptions = DEFAULT_OPTIONS }) => {
       ) : (
         <div>{children}</div>
       )}
+      <Footer />
     </>
   );
 };

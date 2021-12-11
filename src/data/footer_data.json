@@ -1,0 +1,113 @@
+{
+  "products": {
+    "category": "Products",
+    "links": [
+      {
+        "title": "Multifunctional Printers",
+        "link": "#",
+        "show": true
+      },
+      {
+        "title": "Digital Duplicators",
+        "link": "#",
+        "show": true
+      },
+      {
+        "title": "Consumer Printers",
+        "link": "#",
+        "show": true
+      },
+      {
+        "title": "Visual Communication",
+        "link": "#",
+        "show": true
+      },
+      {
+        "title": "Geniune Consumeables",
+        "link": "#",
+        "show": true
+      }
+    ]
+  },
+  "services": {
+    "category": "Services",
+    "links": [
+      {
+        "title": "Per Click Contract",
+        "link": "#",
+        "show": true
+      },
+      {
+        "title": "AMC",
+        "link": "#",
+        "show": true
+      },
+      {
+        "title": "ASC",
+        "link": "#",
+        "show": true
+      },
+      {
+        "title": "Extended Warranty",
+        "link": "#",
+        "show": true
+      }
+    ]
+  },
+  "about_us": {
+    "category": "About Us",
+    "links": [
+      {
+        "title": "About IMPRIMEX",
+        "link": "#",
+        "show": true
+      },
+      {
+        "title": "Management Speaks",
+        "link": "#",
+        "show": true
+      }
+    ]
+  },
+  "social_links": {
+    "category": "Social Links",
+    "links": [
+      {
+        "title": "Email",
+        "link": "#",
+        "show": true,
+        "icon": "envelope-fill"
+      },
+      {
+        "title": "Facebook",
+        "link": "#",
+        "show": true,
+        "icon": "facebook"
+      },
+      {
+        "title": "Instagram",
+        "link": "#",
+        "show": true,
+        "icon": "instagram"
+      },
+      {
+        "title": "WhatsApp",
+        "link": "#",
+        "show": true,
+        "icon": "whatsapp"
+      },
+      {
+        "title": "Twitter",
+        "link": "#",
+        "show": true,
+        "icon": "twitter"
+      },
+      {
+        "title": "LinkedIn",
+        "link": "#",
+        "show": true,
+        "icon": "linkedin"
+      }
+    ]
+  }
+}

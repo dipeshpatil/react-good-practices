@@ -36,7 +36,7 @@ class AboutPage extends PureComponent {
     const { content, address, mapView } = aboutPageData;
     return (
       <BasePage pageOptions={aboutPageOptions}>
-        <div className="p-4">
+        <div className="p-3">
           <Header
             size={1}
             additionalClasses={[
@@ -55,7 +55,7 @@ class AboutPage extends PureComponent {
             {content}
           </div>
         </div>
-        <div className="px-4">
+        <div className="px-3 mb-3">
           <Header
             size={3}
             additionalClasses={[

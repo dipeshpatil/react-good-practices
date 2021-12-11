@@ -1,0 +1,43 @@
+.footer-list {
+  &,
+  ul {
+    list-style-type: none;
+    margin-left: -35px;
+    font-size: 14px;
+    line-height: 1.5rem;
+
+    li {
+      a {
+        text-decoration: none;
+      }
+    }
+  }
+
+  .social-icon {
+    margin-right: 9px;
+  }
+
+  .bi-whatsapp {
+    color: #25d366;
+  }
+
+  .bi-facebook {
+    color: #1877f2;
+  }
+
+  .bi-twitter {
+    color: #1da1f2;
+  }
+
+  .bi-instagram {
+    color: #e4405f;
+  }
+
+  .bi-envelope-fill {
+    color: #f57d00;
+  }
+
+  .bi-linkedin {
+    color: #0a66c2;
+  }
+}

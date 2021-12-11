@@ -15,7 +15,7 @@ const FeaturedProducts = () => {
   );
 
   return (
-    <Container className={clsx([isDark && "bg-dark", "mt-3"])}>
+    <Container className={clsx([isDark && "bg-dark", "mt-3", "mb-3"])}>
       <Header
         size={1}
         additionalClasses={[
@@ -25,9 +25,9 @@ const FeaturedProducts = () => {
           isDark && "text-light",
         ]}
       >
-        <i class="bi bi-arrow-left"></i>
+        <i className="bi bi-arrow-left"></i>
         &nbsp; Featured Products &nbsp;
-        <i class="bi bi-arrow-right"></i>
+        <i className="bi bi-arrow-right"></i>
       </Header>
       <Row className="mt-3">
         <div className="scrollmenu">

@@ -11,6 +11,7 @@ import navBarLinks from "./../../data/navbar_data";
 const DEFAULT_OPTIONS = {
   fluidContainer: true,
   excludeNavbar: false,
+  excludeFooter: false,
   useContainer: true,
 
   navBarOptions: {
@@ -22,8 +23,13 @@ const DEFAULT_OPTIONS = {
 };
 
 const BasePage = ({ children, pageOptions = DEFAULT_OPTIONS }) => {
-  const { excludeNavbar, fluidContainer, useContainer, navBarOptions } =
-    pageOptions;
+  const {
+    excludeNavbar,
+    excludeFooter,
+    fluidContainer,
+    useContainer,
+    navBarOptions,
+  } = pageOptions;
 
   return (
     <>
@@ -40,7 +46,7 @@ const BasePage = ({ children, pageOptions = DEFAULT_OPTIONS }) => {
       ) : (
         <div>{children}</div>
       )}
-      <Footer />
+      {!(excludeFooter ?? DEFAULT_OPTIONS.excludeFooter) && <Footer />}
     </>
   );
 };

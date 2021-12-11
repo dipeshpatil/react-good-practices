@@ -1,13 +1,13 @@
 import React from "react";
+import clsx from "clsx";
 import { Row, Col, Container } from "react-bootstrap";
 
-import FooterLinksListGroup from "../ListGroups/FooterLinksListGroup/FooterLinksListGroup";
 import Header from "../Header/Header";
+import FooterLinksListGroup from "../ListGroups/FooterLinksListGroup/FooterLinksListGroup";
 
 import footerData from "../../data/footer_data.json";
 
 import "./Footer.scss";
-import clsx from "clsx";
 
 const isDark = JSON.parse(localStorage.isDark);
 
@@ -39,7 +39,6 @@ const Footer = () => {
                   {footerData[sequence].category}
                 </Header>
                 <FooterLinksListGroup
-                  category={sequence}
                   listType="unordered"
                   listData={footerData[sequence].links}
                 />

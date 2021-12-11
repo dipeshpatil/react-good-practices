@@ -78,7 +78,7 @@ class AboutPage extends PureComponent {
               </div>
             </Col>
             <Col sm={8}>
-              <MapView embedLink={mapView.embedLink} />
+              <MapView title="Org Map View" embedLink={mapView.embedLink} />
             </Col>
           </Row>
         </div>

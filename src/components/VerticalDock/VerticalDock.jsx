@@ -11,8 +11,8 @@ const isDark = JSON.parse(localStorage.isDark ?? null) || false;
 const DEFAULT_OPTIONS = {
   useContainer: true,
   fluidContainer: true,
-  desktopColSpacing: 1,
-  mobileColSpacing: 3,
+  desktopColSpacing: 2,
+  mobileColSpacing: 4,
 };
 
 const Dock = ({ data = [], options = DEFAULT_OPTIONS }) => {

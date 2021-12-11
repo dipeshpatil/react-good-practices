@@ -28,15 +28,5 @@
     "id": 6,
     "itemName": "Donate",
     "iconURL": "https://cdn-icons-png.flaticon.com/512/4568/4568719.png"
-  },
-  {
-    "id": 7,
-    "itemName": "Rentals",
-    "iconURL": "https://cdn-icons-png.flaticon.com/512/4569/4569989.png"
-  },
-  {
-    "id": 8,
-    "itemName": "Issues",
-    "iconURL": "https://cdn-icons-png.flaticon.com/512/4569/4569003.png"
   }
 ]

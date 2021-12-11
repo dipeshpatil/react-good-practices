@@ -1,10 +1,10 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "aa43298336e4a4621623730e2c8d9eb0",
+    "revision": "fab5d9f96749ad5de1688d13fe8fd0b2",
     "url": "/react-good-practices/index.html"
   },
   {
-    "revision": "986cfb78ad80d5dd1f24",
+    "revision": "32e15649ff29d929699b",
     "url": "/react-good-practices/static/css/main.54e242a8.chunk.css"
   },
   {
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/react-good-practices/static/js/2.e8f74ec0.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "986cfb78ad80d5dd1f24",
-    "url": "/react-good-practices/static/js/main.50035cd7.chunk.js"
+    "revision": "32e15649ff29d929699b",
+    "url": "/react-good-practices/static/js/main.e7c4d1d0.chunk.js"
   },
   {
     "revision": "ea2e96c4ab9016e005a0",

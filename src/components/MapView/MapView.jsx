@@ -6,10 +6,11 @@ const mapStypeDefaultProps = {
   height: "400px",
 };
 
-const MapView = ({ embedLink }) => {
+const MapView = ({ embedLink, title }) => {
   return (
     <div className="mt-2">
       <iframe
+        title={title}
         src={embedLink}
         style={mapStypeDefaultProps}
         loading="lazy"

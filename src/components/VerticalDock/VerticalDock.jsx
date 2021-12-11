@@ -23,9 +23,10 @@ const Dock = ({ data = [], options = DEFAULT_OPTIONS }) => {
         return (
           <Col
             key={item.id}
-            className={`col-${
-              mobileColSpacing ?? DEFAULT_OPTIONS.mobileColSpacing
-            }`}
+            className={clsx([
+              `col-${mobileColSpacing ?? DEFAULT_OPTIONS.mobileColSpacing}`,
+              "my-1",
+            ])}
             sm={desktopColSpacing ?? DEFAULT_OPTIONS.desktopColSpacing}
           >
             <div

@@ -1,24 +1,30 @@
-$dockItemsWrapperBackgroundColor: #ededed;
+$dockWrapper: #f0f0f0;
+$dockDarkWrapper: #161616;
+
+$dockItemsWrapper: #fff;
+$dockItemsDarkWrapper: #212121;
+
 $dockTitleColor: #222f3e;
-$dockTitleHoverColor: #ea2027;
+$dockTitleHoverColor: #eb3b5a;
 
 .vertical__dock {
   padding: 15px;
   text-align: center !important;
   justify-content: center;
   align-items: center;
+  background-color: $dockWrapper;
 
   &-dark {
-    background-color: #161616;
+    background-color: $dockDarkWrapper;
   }
 
   &-wrapper {
-    background-color: $dockItemsWrapperBackgroundColor;
+    background-color: $dockItemsWrapper;
     border-radius: 5px;
     padding: 10px;
 
     &-dark {
-      background-color: #212121;
+      background-color: $dockItemsDarkWrapper;
     }
 
     &-icon {
@@ -26,27 +32,26 @@ $dockTitleHoverColor: #ea2027;
     }
 
     &-title {
-      font-size: 16px;
+      font-size: 12px;
       margin-top: 10px;
       display: block;
       color: $dockTitleColor;
 
       &-dark {
-        color: #f0f0f0;
+        color: $dockItemsWrapper;
       }
     }
 
     &:hover {
       transition: 0.3s all;
-      background-color: darken($dockItemsWrapperBackgroundColor, 15%);
+      background-color: lighten(#858585, 15%);
       cursor: pointer;
 
       &-dark {
-        background-color: darken($dockItemsWrapperBackgroundColor, 35%);
+        background-color: darken($dockDarkWrapper, 35%);
       }
 
       .vertical__dock-wrapper-icon {
-        transform: scale3d(0.85, 0.85, 0.85);
         transition: 0.3s all;
         filter: sepia(0.5);
       }

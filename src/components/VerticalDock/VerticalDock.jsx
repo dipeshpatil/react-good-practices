@@ -11,8 +11,8 @@ const isDark = JSON.parse(localStorage.isDark);
 const DEFAULT_OPTIONS = {
   useContainer: true,
   fluidContainer: true,
-  desktopColSpacing: 2,
-  mobileColSpacing: 4,
+  desktopColSpacing: 1,
+  mobileColSpacing: 3,
 };
 
 const Dock = ({ data = [], options = DEFAULT_OPTIONS }) => {
@@ -42,6 +42,7 @@ const Dock = ({ data = [], options = DEFAULT_OPTIONS }) => {
               <span
                 className={clsx([
                   "vertical__dock-wrapper-title",
+                  "readex-pro",
                   isDark && "vertical__dock-wrapper-title-dark",
                 ])}
               >

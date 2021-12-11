@@ -47,9 +47,7 @@ class AboutPage extends PureComponent {
             ]}
           >
             About&nbsp;
-            <span className={clsx(["oswald", "oswald__semi-bold"])}>
-              IMPRIMEX
-            </span>
+            <span className={clsx(["logo-text"])}>IMPRIMEX</span>
           </Header>
           <div className={clsx(["text-justify", isDark && "text-light"])}>
             {content}

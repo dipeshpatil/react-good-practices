@@ -39,7 +39,7 @@ const NavBar = ({ links = [], navBarOptions = DEFAULT }) => {
         <Navbar.Brand
           href="#"
           onClick={() => toggleDarkMode()}
-          className="oswald oswald__semi-bold"
+          className="logo-text"
         >
           {title ?? DEFAULT.title}
         </Navbar.Brand>

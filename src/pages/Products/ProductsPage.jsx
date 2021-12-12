@@ -1,3 +1,4 @@
+import clsx from "clsx";
 import React, { PureComponent } from "react";
 import { Row, Col, Image } from "react-bootstrap";
 
@@ -49,7 +50,10 @@ class ProductsPage extends PureComponent {
             return (
               <Col className="col-6 text-center mt-3" sm={3} key={idx}>
                 <Image className="products__image" src={product.image} />
-                <div className="products__title">{product.title}</div>
+                <div className={clsx([
+                  "products__title",
+                  isDark && "products__title-dark"
+                ])}>{product.title}</div>
               </Col>
             );
           })}

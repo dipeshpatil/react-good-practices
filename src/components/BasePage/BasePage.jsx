@@ -1,4 +1,5 @@
 import React from "react";
+import clsx from "clsx";
 import PropTypes from "prop-types";
 
 import { Container } from "react-bootstrap";
@@ -13,6 +14,7 @@ const DEFAULT_OPTIONS = {
   excludeNavbar: false,
   excludeFooter: false,
   useContainer: true,
+  additionalClasses: [],
 
   navBarOptions: {
     variant: "light",
@@ -29,6 +31,7 @@ const BasePage = ({ children, pageOptions = DEFAULT_OPTIONS }) => {
     fluidContainer,
     useContainer,
     navBarOptions,
+    additionalClasses,
   } = pageOptions;
 
   return (
@@ -40,11 +43,22 @@ const BasePage = ({ children, pageOptions = DEFAULT_OPTIONS }) => {
         />
       )}
       {useContainer ?? DEFAULT_OPTIONS.useContainer ? (
-        <Container fluid={fluidContainer ?? DEFAULT_OPTIONS.fluidContainer}>
+        <Container
+          className={clsx(
+            additionalClasses ?? DEFAULT_OPTIONS.additionalClasses
+          )}
+          fluid={fluidContainer ?? DEFAULT_OPTIONS.fluidContainer}
+        >
           {children}
         </Container>
       ) : (
-        <div>{children}</div>
+        <div
+          className={clsx(
+            additionalClasses ?? DEFAULT_OPTIONS.additionalClasses
+          )}
+        >
+          {children}
+        </div>
       )}
       {!(excludeFooter ?? DEFAULT_OPTIONS.excludeFooter) && <Footer />}
     </>

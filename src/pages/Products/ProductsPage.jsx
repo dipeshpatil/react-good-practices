@@ -29,7 +29,6 @@ const productCategoryMapping = {
   cp: "consumer_printers",
   dd: "digital_duplicators",
   vc: "visual_communications",
-  all: "all_products",
 };
 
 class ProductsPage extends PureComponent {
@@ -39,8 +38,20 @@ class ProductsPage extends PureComponent {
   }
   render() {
     const productCategory = this.props.match.params.cat;
-    const products =
-      productsData.products[productCategoryMapping[productCategory]];
+    let products = {};
+    let allProducts = [];
+
+    if (productCategory === "all") {
+      Object.keys(productCategoryMapping).map((category) => {
+        allProducts.push(
+          ...productsData.products[productCategoryMapping[category]].items
+        );
+      });
+      products.items = allProducts;
+      products.category = "Products";
+    } else {
+      products = productsData.products[productCategoryMapping[productCategory]];
+    }
 
     return (
       <BasePage pageOptions={productPageOptions}>
@@ -56,23 +67,25 @@ class ProductsPage extends PureComponent {
         >
           {products.category}
         </Header>
-        <Row className="products">
-          {products.items.map((product, idx) => {
-            return (
-              <Col className="col-6 text-center mt-3" sm={3} key={idx}>
-                <Image className="products__image" src={product.image} />
-                <div
-                  className={clsx([
-                    "products__title",
-                    isDark && "products__title-dark",
-                  ])}
-                >
-                  {product.title}
-                </div>
-              </Col>
-            );
-          })}
-        </Row>
+        {products.items.length > 0 && (
+          <Row className="products">
+            {products.items.map((product, idx) => {
+              return (
+                <Col className="col-6 text-center mt-3" sm={3} key={idx}>
+                  <Image className="products__image" src={product.image} />
+                  <div
+                    className={clsx([
+                      "products__title",
+                      isDark && "products__title-dark",
+                    ])}
+                  >
+                    {product.title}
+                  </div>
+                </Col>
+              );
+            })}
+          </Row>
+        )}
       </BasePage>
     );
   }

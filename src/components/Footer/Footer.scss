@@ -13,4 +13,42 @@
   .row {
     margin: 0 auto !important;
   }
+
+  .quick_links {
+    margin-left: 10px;
+    font-size: 14px;
+    font-family: "Readex Pro", sans-serif !important;
+    font-weight: 400;
+
+    .quick_link {
+      padding-right: 15px;
+      text-decoration: none;
+      color: #212121;
+
+      &:hover {
+        color: #eb3b5a;
+        text-decoration: underline;
+      }
+
+      &__dark {
+        color: #ffffff;
+      }
+    }
+  }
+
+  .copyright {
+    margin-top: 10px;
+    text-align: end;
+
+    .logo-text {
+      display: block;
+    }
+
+    &__info {
+      display: block;
+      font-family: "Readex Pro", sans-serif !important;
+      font-weight: 300;
+      font-size: 13px;
+    }
+  }
 }

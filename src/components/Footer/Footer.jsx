@@ -46,6 +46,31 @@ const Footer = () => {
             );
           })}
         </Row>
+        <div className="quick_links">
+          {footerData["quick_links"].map((quickLinkItem, idx) => {
+            const { show, link, title } = quickLinkItem;
+
+            return (
+              show && (
+                <a
+                  className={clsx(["quick_link", isDark && "quick_link__dark"])}
+                  key={idx}
+                  href={link}
+                >
+                  {title}
+                </a>
+              )
+            );
+          })}
+        </div>
+        <div className="copyright">
+          <span className="logo-text">IMPRIMEX</span>
+          <span
+            className={`copyright__info ${isDark ? "text-light" : "text-dark"}`}
+          >
+            Copyright {new Date().getFullYear()} Imprimex. All Rights Reserved.
+          </span>
+        </div>
       </Container>
     </div>
   );

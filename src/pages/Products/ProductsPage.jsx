@@ -1,5 +1,4 @@
 import React, { PureComponent } from "react";
-import clsx from "clsx";
 import { Row, Col, Image } from "react-bootstrap";
 
 import BasePage from "../../components/BasePage/BasePage";

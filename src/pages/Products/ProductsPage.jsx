@@ -24,13 +24,23 @@ const productPageOptions = {
   },
 };
 
+const productCategoryMapping = {
+  mfp: "multifunctional_printers",
+  cp: "consumer_printers",
+  dd: "digital_duplicators",
+  vc: "visual_communications",
+  all: "all_products",
+};
+
 class ProductsPage extends PureComponent {
   constructor(props) {
     super(props);
     this.state = {};
   }
   render() {
-    const { products } = productsData;
+    const productCategory = this.props.match.params.cat;
+    const products =
+      productsData.products[productCategoryMapping[productCategory]];
 
     return (
       <BasePage pageOptions={productPageOptions}>
@@ -40,13 +50,14 @@ class ProductsPage extends PureComponent {
             "text-center",
             "readex-pro",
             "readex-pro__medium",
-            isDark && "text-light",
+            "mt-3",
+            isDark && "text-danger",
           ]}
         >
-          Products
+          {products.category}
         </Header>
         <Row className="products">
-          {products["multifunctional_printers"].items.map((product, idx) => {
+          {products.items.map((product, idx) => {
             return (
               <Col className="col-6 text-center mt-3" sm={3} key={idx}>
                 <Image className="products__image" src={product.image} />

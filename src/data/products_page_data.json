@@ -103,6 +103,201 @@
           "subCategory": "COLOR_MFP"
         }
       ]
+    },
+    "digital_duplicators": {
+      "category": "Digital Duplicators",
+      "items": [
+        {
+          "title": "DX 2430",
+          "description": "High-speed printing does not have to be expensive. The Priport™ DX 2430 offers excellent value for your money. Printing an impressive 90 pages per minute, this system is both reliable and user-friendly. Adding spot colours or editing documents for a professional look is easy. This duplicator turns into an extra fast printer when upgraded with a PC controller.",
+          "featured": false,
+          "show": true,
+          "tags": ["copy", "print"],
+          "image": "http://imprimo.co.in/products/DX_2430.jpg",
+          "subCategory": "DD"
+        },
+        {
+          "title": "DD 3344",
+          "description": "Copy directly from books and magazines to produce high-speed, low-cost A4/B4 copies and prints. Easy-to-use, very economical on the long run and network connectivity available. On top of that it gives you superior reliability and environmental value. Speedy performance and user-friendly functions that meet user needs Superior reliability and environmental value A device to depend on for high-volume printing.",
+          "featured": false,
+          "show": true,
+          "tags": ["copy", "print"],
+          "image": "http://imprimo.co.in/products/DD_3344.jpg",
+          "subCategory": "DD"
+        },
+        {
+          "title": "DD 5450",
+          "description": "The DD 5450 A3 digital duplicator is a robust mid-range model offering excellent performance at an affordable cost. Running at a fast print speed of up to 130 cpm, and offering high-quality image duplication, the DD 5450 is equipped with a user-friendly operation panel, an integrated network controller, @Remote capabilities, and innovative features to ensure smooth paper transfer. It is particularly suitable for educational institutions, government offices and NGOs.",
+          "featured": true,
+          "show": true,
+          "tags": ["copy", "print"],
+          "image": "http://imprimo.co.in/products/DD_5450.jpg",
+          "subCategory": "DD"
+        }
+      ]
+    },
+    "consumer_printers": {
+      "category": "Consumer Printers",
+      "items": [
+        {
+          "title": "SP C440 DN",
+          "description": "The RICOH SP C440DN is a printer with solid fundamental performance and trusted reliability to keep your work rolling non-stop. The RICOH SP C440DN prints at a speed of up to 40 pages per minute, comes with high duty cycle which requires minimum maintenance, ensuring a low cost per page to optimize overall office productivity.",
+          "featured": false,
+          "show": true,
+          "tags": ["print"],
+          "image": "http://imprimo.co.in/products/SP_C440_DN.jpg",
+          "subCategory": "CL"
+        },
+        {
+          "title": "SP C252 DN",
+          "description": "RICOH SP C252DN offers all the benefits of colour with no-compromise performance. Productive and economical, they are designed for professionals and busy workgroups, combining quality colour, reliability and low running costs. With fast print speeds, double-sided printing and wireless networking, RICOH SP C252DN is an excellent print solution. It supports wireless printing and scanning from smartphones and tablet computers.",
+          "featured": true,
+          "show": true,
+          "tags": ["print"],
+          "image": "http://imprimo.co.in/products/SP_C252_DN.jpg",
+          "subCategory": "CL"
+        },
+        {
+          "title": "SP C250 DN",
+          "description": "Everyone can enjoy high quality colour with the RICOH SP C250DN printer. This small footprint device is attractively priced to suit home workers and small businesses. With fast print speeds and no-compromise functionality, it is also perfect for busy workgroups. Automatic double-sided printing, network and WiFi connectivity come as a standard configuration. In addition, RICOH SP C250DN now even comes with print support for tablets and smartphones1. It brings vibrant colour and versatility to everyone through exceptional performance.",
+          "featured": false,
+          "show": true,
+          "tags": ["print"],
+          "image": "http://imprimo.co.in/products/SP_C250_DN.jpg",
+          "subCategory": "CL"
+        },
+        {
+          "title": "SP 212 NW",
+          "description": "The RICOH SP 212Nw combines high productivity with ease of use in a compact package. Compact enough to fit on a desktop, and so quiet that it goes unnoticed, the single function series RICOH SP 212Nw is the ideal A4 black & white printer for small and home offices. A fast print speed. To top it off, paperless fax reception, manual double-sided printing and a high-yield, all-in-one print cartridge reduce your overall costs. Space saving Fast: 22 pages per minute High resolution: Max 1200 dpi Manual double-sided printing & PCL support.",
+          "featured": true,
+          "show": true,
+          "tags": ["print"],
+          "image": "http://imprimo.co.in/products/SP_212_NW.jpg",
+          "subCategory": "BWL"
+        },
+        {
+          "title": "SP 210",
+          "description": "The RICOH SP 210 series combines high productivity with ease of use in a compact package. Compact enough to fit on a desktop, and so quiet that it goes unnoticed, the single function series RICOH SP 210 is the ideal A4 black & white printer for small and home offices. A fast print speed. To top it off, paperless fax reception, manual double-sided printing and a high-yield, all-in-one print cartridge reduce your overall costs.",
+          "featured": false,
+          "show": true,
+          "tags": ["print"],
+          "image": "http://imprimo.co.in/products/SP_210.jpg",
+          "subCategory": "BWL"
+        },
+        {
+          "title": "SP 3510 SF",
+          "description": "The Aficio™SP 3500SF/SP 3510SF black-and-white A4 MFPs give you smart new ways to print, copy, scan and fax. They significantly reduce your costs and improve the speed and agility of your business. These devices are packed with all the features you would expect from a top-of-the-range MFP in terms of speed, image quality and paper handling options. Plus, they are compact and easy-to-maintain.",
+          "featured": true,
+          "show": true,
+          "tags": ["copy", "fax", "print", "scan"],
+          "image": "http://imprimo.co.in/products/SP_3510_SF.jpg",
+          "subCategory": "AIO"
+        },
+        {
+          "title": "SP 310 SFN",
+          "description": "Small, smart and energy-efficient, the SP 310SFN are designed to impress. Compact enough to fit unobtrusively on a desk, these innovative B/W A4 laser printers will astound you with their speed and efficiency. The devices are easy to operate and simple to maintain. Their energy consumption is very low. And they incorporate a host of environmentally-responsible features such as Energy Saver mode and automatic duplex to lower your carbon footprint. In short, if you’re looking for fast, compact, energy-efficient, versatile black and white printers, you’ll find them in the SP 310SFN.",
+          "featured": false,
+          "show": true,
+          "tags": ["copy", "fax", "print", "scan"],
+          "image": "http://imprimo.co.in/products/SP_310_SFN.jpg",
+          "subCategory": "AIO"
+        }
+      ]
+    },
+    "visual_communications": {
+      "category": "Visual Communications",
+      "items": [
+        {
+          "title": "PJS 2440",
+          "description": "You want your audience to see your latest great idea. So why not put it right in front of them? Use the innovative RICOH® PJ S2440 to project images, videos, presentations and more with amazing brightness, colour and clarity quickly in almost any environment. Transport the affordable, lightweight system with ease and showcase your best work at projection sizes ranging from 0.76 meters to 7.62 meter wide diagonally, even when placed only a few centimeters away from the screen or wall. Wireless projection is available, by using Wi-Fi dongle. It’s easy to set up and use in classrooms, conference rooms and other venues. Even better, it’s designed to use less energy, so you can save operating costs, too.",
+          "featured": false,
+          "show": true,
+          "tags": [],
+          "image": "http://imprimo.co.in/products/PJS_2440.jpg",
+          "subCategory": "PJ"
+        },
+        {
+          "title": "PJWXC 1110",
+          "description": "Imagine boarding a plane equipped with an incredibly small projector that fits in the palm of your hand, yet has the extraordinary power to last through marathon business meetings. Think about the possibilities that such a projector could bring to the conference room or classroom where space is tight. Now, consider having the flexibility to project plugged into a desktop computer, from embedded memory on the projector, or even directly from your mobile device using MHL. The RICOH® PJ WXC1110 projection system delivers all this and more—opening up a world of new possibilities for presenting anywhere, anytime. Ultra lightweight, with exceptional engine life and bright LED illumination, the PJ WXC1110 projector breaks the mold while breaking through barriers in making information mobile.",
+          "featured": false,
+          "show": true,
+          "tags": [],
+          "image": "http://imprimo.co.in/products/PJWXC_1110.jpg",
+          "subCategory": "PJ"
+        },
+        {
+          "title": "PJX 4340",
+          "description": "Outstanding image Quality, Short throw Smart Design When you need a compact projector for presentations in small meeting rooms for up to 30 viewers, PJ X4340 is the ideal solution. Weighing less than 3kg, this short throw projector is perfect for business meetings and educational classes. The 3000 lumens brightness projects vibrant images at up to 10,000:1 contrast in ImageCare mode, which also provides 10,000 hours of lamp life.",
+          "featured": false,
+          "show": true,
+          "tags": [],
+          "image": "http://imprimo.co.in/products/PJX_4340.jpg",
+          "subCategory": "PJ"
+        },
+        {
+          "title": "PJWX 4152 NI",
+          "description": "Use the RICOH® PJ WX4152, PJ WX4152N and PJ WX4152NI (PJ 4152 Series) to ensure nothing gets between what’s on your mind and what’s on the big screen. Place the ultra-short throw projector within centimeters of the display surface and showcase crisp, compelling high-quality presentations, videos, images and more at up to 2.03 meters diagonally without shadows, glare or other distortions. Use innovative 360-degree projection to project downward onto floors or tables, sideways, or onto smoked glass surfaces to give every member of your audience the best view every time.",
+          "featured": false,
+          "show": true,
+          "tags": [],
+          "image": "http://imprimo.co.in/products/PJWX_4152_NI.jpg",
+          "subCategory": "PJ"
+        },
+        {
+          "title": "PJWX 361 N",
+          "description": "Boost the brightness of your presentations and displays with RICOH PJ WX5361N projectors. Outstanding brightness with 4,500 lumen for PJ WX5361N supported by a high-spec 16 W speaker ensure top quality images and superior audio. Extensive wired or wireless network connectivity and helpful on-screen prompts ensure that even novices can start projecting immediately. These projectors are easy to install virtually anywhere, and integrate fully with RICOHs total office solutions.",
+          "featured": false,
+          "show": true,
+          "tags": [],
+          "image": "http://imprimo.co.in/products/PJWX_361_N.jpg",
+          "subCategory": "PJ"
+        },
+        {
+          "title": "PJKU 12000",
+          "description": "A high-end projector that can offer you only the highest image quality – this advanced device is perfect for museums, art galleries and hotels – or for signage use or wall-based presentations. Thanks to its V/H Keystone, 4-point and V/H Pincushion correction, you can maintain wider and crisper images on a larger scale, so whatever you’re projecting, the images look as good as they can possibly look. And thanks to its motorised lens-shift, you can change projection vertically and horizontally without moving the projector.",
+          "featured": false,
+          "show": true,
+          "tags": [],
+          "image": "http://imprimo.co.in/products/PJKU_12000.jpg",
+          "subCategory": "PJ"
+        },
+        {
+          "title": "PJWU 6181N",
+          "description": "With an output of 483W this powerful WUXGA projector gives you a display resolution of 1920x1200 pixels to support HD quality presentations in 16:10 screen aspect ratio for up to 100 people. Viewing comfort is assured with a 6000:1 contrast ratio and 6200 lumens brilliance providing vivid presentations with vibrant colours. The PJ WU6181N is simple for you to operate with a remote control and it can even be remotely managed from another location via a LAN connection.",
+          "featured": true,
+          "show": true,
+          "tags": [],
+          "image": "http://imprimo.co.in/products/PJWU_6181N.jpg",
+          "subCategory": "PJ"
+        },
+        {
+          "title": "D5500",
+          "description": "Ricoh brings yet another revolutionary product to the business, industrial and educational worlds: the Interactive Whiteboard D5500. It offers high-quality, smooth handwriting and a high-resolution display, and enables easy remote image sharing. This remarkable innovation will make your business meetings, teleconferences, collaborative presentations and classroom training sessions so much more productive and cost-efficient.",
+          "featured": true,
+          "show": true,
+          "tags": [],
+          "image": "http://imprimo.co.in/products/D5500.jpg",
+          "subCategory": "WB"
+        },
+        {
+          "title": "D6510",
+          "description": "Ricoh brings yet another revolutionary product to the business, industrial and educational worlds: the Interactive Whiteboard D6510. It offers high-quality, smooth handwriting and a high-resolution display, and enables easy remote image sharing. This remarkable innovation will make your business meetings, teleconferences, collaborative presentations and classroom training sessions so much more productive and cost-efficient.",
+          "featured": false,
+          "show": true,
+          "tags": [],
+          "image": "http://imprimo.co.in/products/D6510.jpg",
+          "subCategory": "WB"
+        },
+        {
+          "title": "D8400",
+          "description": "Success in manufacturing, education and commerce arrives more efficiently. The new, interactive Whiteboard D8400 from Ricoh assists training and collaborative work with straightforward, intuitive and immediate operation, as well as many innovative advantages. From the 2.13 m full HD 4k LCD display to interactive controls that can be used at the same time from multiple locations, the D8400 provides a next-generation opportunity to accelerate understanding.",
+          "featured": false,
+          "show": true,
+          "tags": [],
+          "image": "http://imprimo.co.in/products/D8400.jpg",
+          "subCategory": "WB"
+        }
+      ]
     }
   }
 }

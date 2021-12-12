@@ -19,7 +19,7 @@ export default class App extends React.Component {
       <div>
         <Route exact path="/" component={HomePage} />
         <Route path="/home" component={HomePage} />
-        <Route path="/products" component={ProductsPage} />
+        <Route path="/products/:cat" component={ProductsPage} />
         <Route path="/about" component={AboutPage} />
         <Route path="/contact" component={ContactPage} />
       </div>

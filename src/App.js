@@ -2,6 +2,7 @@ import React from "react";
 import { Route } from "react-router-dom";
 
 import HomePage from "./pages/Home/HomePage";
+import ProductsPage from "./pages/Products/ProductsPage";
 import AboutPage from "./pages/About/AboutPage";
 import ContactPage from "./pages/Contact/ContactPage";
 
@@ -18,6 +19,7 @@ export default class App extends React.Component {
       <div>
         <Route exact path="/" component={HomePage} />
         <Route path="/home" component={HomePage} />
+        <Route path="/products" component={ProductsPage} />
         <Route path="/about" component={AboutPage} />
         <Route path="/contact" component={ContactPage} />
       </div>

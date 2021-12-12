@@ -15,7 +15,7 @@ const FeaturedProducts = () => {
   );
 
   return (
-    <Container className={clsx([isDark && "bg-dark", "mt-3", "mb-3"])}>
+    <Container className={clsx([isDark && "bg-dark", "mt-4", "mb-4"])}>
       <Header
         size={1}
         additionalClasses={[

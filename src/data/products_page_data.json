@@ -1,0 +1,108 @@
+{
+  "products": {
+    "multifunctional_printers": {
+      "category": "Multifunctional Printers",
+      "items": [
+        {
+          "title": "MP 305P SP",
+          "description": "The MP 305 SP is smart, compact A4 monochrome MFPs with A3 capability that is ideal for small to medium-sized offices. With great usability functions like the Smart Operation Panel, you get all the advantages and the compact footprint of an A4 MFP but with A3 printing capabilities. Printing at 30ppm this device is versatile, extremely quiet and ideal if you’re looking for inexpensive A3 printing solutions without losing valuable office space that a traditional A3 MFP would occupy.",
+          "featured": true,
+          "show": true,
+          "tags": ["copy", "fax", "print", "scan"],
+          "image": "http://imprimo.co.in/products/MP_305P_SP.jpg",
+          "subCategory": "BW_MFP"
+        },
+        {
+          "title": "MP 2014 AD",
+          "description": "The Ricoh MP 2014/ MP 2014D/ MP 2014AD is an A3 black-and-white MFP with a brisk output speed of 20 ppm, providing maximum efficiency for document processing in your office. Your total cost of ownership is low because the MP 2014/ MP 2014D/ MP 2014AD has an economical initial cost with low operating expenses. This reliable MFP has been designed to provide you with robust performance in demanding office environments. The comes with an Energy Saving Key, putting it instantly into sleep-mode, reducing your energy bill.",
+          "featured": false,
+          "show": true,
+          "tags": ["copy", "print", "scan"],
+          "image": "http://imprimo.co.in/products/MP_2014_AD.jpg",
+          "subCategory": "BW_MFP"
+        },
+        {
+          "title": "MP 2014 D",
+          "description": "The Ricoh MP 2014/ MP 2014D/ MP 2014AD is an A3 black-and-white MFP with a brisk output speed of 20 ppm, providing maximum efficiency for document processing in your office. Your total cost of ownership is low because the MP 2014/ MP 2014D/ MP 2014AD has an economical initial cost with low operating expenses. This reliable MFP has been designed to provide you with robust performance in demanding office environments. The comes with an Energy Saving Key, putting it instantly into sleep-mode, reducing your energy bill.",
+          "featured": true,
+          "show": true,
+          "tags": ["copy", "print", "scan"],
+          "image": "http://imprimo.co.in/products/MP_2014_D.jpg",
+          "subCategory": "BW_MFP"
+        },
+        {
+          "title": "MP 2501 SP",
+          "description": "The MP 2501SP is a versatile A3 mono MFP for busy workgroups. Packed with class-leading features, it offers impressive productivity and low running costs. A colour scanner, automatic two-sided printing and ID Card copy come as standard. And, for ease of use, there's an intuitive colour touchscreen. A GWNX controller and optional HDD add everything from secure print to solutions integration. On its own or in a managed fleet, the MFP gives you the flexibility to transform document processes. Now or in the future as your needs change.",
+          "featured": false,
+          "show": true,
+          "tags": ["copy", "fax", "print", "scan"],
+          "image": "http://imprimo.co.in/products/MP_2501_SP.jpg",
+          "subCategory": "BW_MFP"
+        },
+        {
+          "title": "MP 2555 SP",
+          "description": "Use the RICOH® MP 2555SP to simplify everyday office tasks and move information to the people who need it most, in the format they prefer. Scan full-color images, brochures and other documents and distribute them instantly. With the same pinch-and-flick and scrolling gestures you use on your smartphone or tablet, you can access critical information, set shortcuts and distribute information from the advanced 25.65 cm Smart Operation Panel. Alternatively, you can use smart mobile devices to connect remotely and work & distribute files on the go. Take advantage of advanced security controls to help protect your data. Nevertheless, the versatile all-inone MFP is designed specifically to use less energy, which helps reduce costs. Print up to 25 prints/copies per minute for productive black-and-white output Use intuitive touchscreen controls to copy, print, scan and fax quickly Create your own workflows with shortcuts to simplify tasks Access, print and distribute information from your personal mobile device Minimize energy costs via a wide range of innovative eco-friendly features Produce professional-looking saddle-stitched and punched booklets, presentations and proposals Simplify sorting and stapling tasks with compact internal and high-output external finishers Expedite sorting, stapling, folding and hole punching via a wide range of finishing options.",
+          "featured": false,
+          "show": true,
+          "tags": ["copy", "fax", "print", "scan"],
+          "image": "http://imprimo.co.in/products/MP_2555_SP.jpg",
+          "subCategory": "BW_MFP"
+        },
+        {
+          "title": "MP 3055 SP",
+          "description": "Use the RICOH® MP 3055SP to simplify everyday office tasks and move information to the people who need it most, in the format they prefer. Scan full-color images, brochures and other documents and distribute them instantly. With the same pinch-and-flick and scrolling gestures you use on your smartphone or tablet, you can access critical information, set shortcuts and distribute information from the advanced 25.65 cm Smart Operation Panel. Alternatively, you can use smart mobile devices to connect remotely and work.",
+          "featured": true,
+          "show": true,
+          "tags": ["copy", "fax", "print", "scan"],
+          "image": "http://imprimo.co.in/products/MP_3055_SP.png",
+          "subCategory": "BW_MFP"
+        },
+        {
+          "title": "MP 3555 SP",
+          "description": "Use the RICOH® MP 3555SP to simplify everyday office tasks and move information to the people who need it most, in the format they prefer. Scan full-color images, brochures and other documents and distribute them instantly. With the same pinch-and-flick and scrolling gestures you use on your smartphone or tablet, you can access critical information, set shortcuts and distribute information from the advanced 25.65 cm Smart Operation Panel. Alternatively, you can use smart mobile devices to connect remotely and work & distribute files on the go. Take advantage of advanced security controls to help protect your data. Nevertheless, the versatile all-inone MFP is designed specifically to use less energy, which helps reduce costs. Print up to 35 prints/copies per minute for productive black-and-white output Use intuitive touchscreen controls to copy, print, scan and fax quickly Create your own workflows with shortcuts to simplify tasks Access, print and distribute information from your personal mobile device Minimize energy costs via a wide range of innovative eco-friendly features Produce professional-looking saddle-stitched and punched booklets, presentations and proposals Simplify sorting and stapling tasks with compact internal and high-output external finishers Expedite sorting, stapling, folding and hole punching via a wide range of finishing options.",
+          "featured": false,
+          "show": true,
+          "tags": ["copy", "fax", "print", "scan"],
+          "image": "http://imprimo.co.in/products/MP_3555_SP.jpg",
+          "subCategory": "BW_MFP"
+        },
+        {
+          "title": "MP C2011",
+          "description": "Business today can be complex and challenging, but RICOH MP C2011SP makes life in the office simple with high productivity features from an easy to operate multi-function printer (MFP). Best in class performance is delivered from a compact device with a small footprint that still offers advanced features for multifunctional operations. This versatile MFP produces full colour A3 output with two paper drawers for large sheet capacity. Low energy usage also means that the MP C2011SP is economical to run and friendly to the environment, combining exceptional performance with an affordable price.",
+          "featured": false,
+          "show": true,
+          "tags": ["copy", "print", "scan"],
+          "image": "http://imprimo.co.in/products/MP_C2011.jpg",
+          "subCategory": "COLOR_MFP"
+        },
+        {
+          "title": "MP C2004exSP",
+          "description": "As speed is one important key success factor of your business, Ricoh launches Ricoh EZ Plus –Starter Pack, it can help to simplify and speed up your documents processes. These four applications installed on Ricoh multifunction printer’s Smart Operation Panel, aim to eliminate the tedious steps for some of the existing documents processes. Thus, allowing you to work more efficiently and focus on your primary job.",
+          "featured": false,
+          "show": true,
+          "tags": ["copy", "fax", "print", "scan"],
+          "image": "http://imprimo.co.in/products/MP_C2004exSP.jpg",
+          "subCategory": "COLOR_MFP"
+        },
+        {
+          "title": "MP C2504exSP",
+          "description": "As speed is one important key success factor of your business, Ricoh launches Ricoh EZ Plus –Starter Pack, it can help to simplify and speed up your documents processes. These four applications installed on Ricoh multifunction printer’s Smart Operation Panel, aim to eliminate the tedious steps for some of the existing documents processes. Thus, allowing you to work more efficiently and focus on your primary job.",
+          "featured": false,
+          "show": true,
+          "tags": ["copy", "fax", "print", "scan"],
+          "image": "http://imprimo.co.in/products/MP_C2504exSP.jpg",
+          "subCategory": "COLOR_MFP"
+        },
+        {
+          "title": "MP C3004exSP",
+          "description": "As speed is one important key success factor of your business, Ricoh launches Ricoh EZ Plus –Starter Pack, it can help to simplify and speed up your documents processes. These four applications installed on Ricoh multifunction printer’s Smart Operation Panel, aim to eliminate the tedious steps for some of the existing documents processes. Thus, allowing you to work more efficiently and focus on your primary job.",
+          "featured": true,
+          "show": true,
+          "tags": ["copy", "fax", "print", "scan"],
+          "image": "http://imprimo.co.in/products/MP_C3004exSP.jpg",
+          "subCategory": "COLOR_MFP"
+        }
+      ]
+    }
+  }
+}

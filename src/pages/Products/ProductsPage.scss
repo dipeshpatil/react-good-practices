@@ -1,0 +1,27 @@
+.products {
+  &__image {
+    width: 70%;
+    border-radius: 7px;
+  }
+
+  &__title {
+    margin-top: 10px;
+  }
+
+  .col-6,
+  .col-sm-3 {
+    &:hover {
+      cursor: pointer;
+
+      .products__title {
+        color: #eb3b5a;
+        transition: 300ms ease-in-out;
+      }
+
+      .products__image {
+        filter: sepia(0.7);
+        transition: 300ms ease-in-out;
+      }
+    }
+  }
+}

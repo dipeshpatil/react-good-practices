@@ -23,8 +23,11 @@
       }
 
       .products__image {
-        filter: sepia(0.7);
-        transition: 300ms ease-in-out;
+        filter: sepia(100%) hue-rotate(290deg);
+        box-shadow: 2px 1px 65px 5px #eb3b5a;
+        -webkit-box-shadow: 2px 1px 65px 5px #eb3b5a;
+        -moz-box-shadow: 2px 1px 65px 5px #eb3b5a;
+        transition: 300ms ease-in;
       }
     }
   }

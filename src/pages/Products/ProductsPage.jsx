@@ -43,7 +43,7 @@ class ProductsPage extends PureComponent {
 
     if (productCategory === "all") {
       Object.keys(productCategoryMapping).map((category) => {
-        allProducts.push(
+        return allProducts.push(
           ...productsData.products[productCategoryMapping[category]].items
         );
       });

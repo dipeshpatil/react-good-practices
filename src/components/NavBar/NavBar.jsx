@@ -22,7 +22,6 @@ const toggleDarkMode = () => {
 
 const NavBar = ({ links = [], navBarOptions = DEFAULT }) => {
   const { variant, title, background, orientation } = navBarOptions;
-  console.log(navBarOptions);
   const navbarOrientation = ALLOWED_NAVBAR_DIRECTIONS.slice(0, 2).includes(
     orientation ?? DEFAULT.orientation
   )
@@ -35,7 +34,7 @@ const NavBar = ({ links = [], navBarOptions = DEFAULT }) => {
       bg={background ?? DEFAULT.background}
       expand="lg"
     >
-      <Container>
+      <Container fluid>
         <Navbar.Brand
           href="#"
           onClick={() => toggleDarkMode()}

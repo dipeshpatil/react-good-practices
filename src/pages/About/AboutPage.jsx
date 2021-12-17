@@ -9,20 +9,16 @@ import MapView from "../../components/MapView/MapView";
 
 import aboutPageData from "../../data/about_page_data.json";
 
+// Config
+import config from "../../config/config";
+
 import "./AboutPage.scss";
 
-const isDark = JSON.parse(localStorage.isDark ?? null) || false;
+const { appName, isDark } = config;
 
 const aboutPageOptions = {
   fluidContainer: false,
   useContainer: true,
-
-  navBarOptions: {
-    variant: isDark ? "dark" : "light",
-    background: isDark ? "dark" : "light",
-    title: "IMPRIMEX",
-    orientation: "end",
-  },
 };
 
 class AboutPage extends PureComponent {
@@ -47,7 +43,7 @@ class AboutPage extends PureComponent {
             ]}
           >
             About&nbsp;
-            <span className={clsx(["logo-text"])}>IMPRIMEX</span>
+            <span className={clsx(["logo-text"])}>{appName}</span>
           </Header>
           <div className={clsx(["text-justify", isDark && "text-light"])}>
             {content}

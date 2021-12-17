@@ -7,9 +7,11 @@ import FooterLinksListGroup from "../ListGroups/FooterLinksListGroup/FooterLinks
 
 import footerData from "../../data/footer_data.json";
 
+import config from "../../config/config";
+
 import "./Footer.scss";
 
-const isDark = JSON.parse(localStorage.isDark ?? null) || false;
+const { isDark } = config;
 
 const footerLinksSequence = [
   "products",

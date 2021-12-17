@@ -4,9 +4,11 @@ import PropTypes from "prop-types";
 
 import { Container, Row, Col, Image } from "react-bootstrap";
 
+import config from "../../config/config";
+
 import "./VerticalDock.scss";
 
-const isDark = JSON.parse(localStorage.isDark ?? null) || false;
+const { isDark } = config;
 
 const DEFAULT_OPTIONS = {
   useContainer: true,

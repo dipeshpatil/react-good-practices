@@ -2,9 +2,11 @@ import React from "react";
 import PropTypes from "prop-types";
 import clsx from "clsx";
 
+import config from "../../../config/config";
+
 import "./FooterLinksListGroup.scss";
 
-const isDark = JSON.parse(localStorage.isDark ?? null) || false;
+const { isDark } = config;
 
 const DispatchListGroupType = ({ children, type }) => {
   const allowedTypes = ["ordered", "unordered"];

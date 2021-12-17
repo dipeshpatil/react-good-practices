@@ -4,7 +4,11 @@ import clsx from "clsx";
 
 import { Modal, Container, Row, Col, Image } from "react-bootstrap";
 
+import config from "../../../config/config";
+
 import "./ProductModal.scss";
+
+const { isDark } = config;
 
 const screen = {
   width: window.screen.width,
@@ -15,7 +19,12 @@ const ProductModal = ({ product = {}, handleClose, show }) => {
   const { title, description, image, tags, featured } = product;
 
   return (
-    <Modal size="xl" show={show ?? false} onHide={handleClose}>
+    <Modal
+      className={clsx(["product-modal", isDark && "product-modal__dark"])}
+      size="xl"
+      show={show ?? false}
+      onHide={handleClose}
+    >
       <Modal.Header closeButton>
         <Modal.Title
           className={clsx(["readex-pro", "readex-pro__medium", "text-danger"])}

@@ -4,6 +4,7 @@ import { Row, Col, Image } from "react-bootstrap";
 
 import BasePage from "../../components/BasePage/BasePage";
 import Header from "../../components/Header/Header";
+import ProductBox from "../../components/ProductBox/ProductBox";
 
 import productsData from "../../data/products_page_data.json";
 
@@ -14,7 +15,7 @@ const isDark = JSON.parse(localStorage.isDark ?? null) || false;
 const productPageOptions = {
   fluidContainer: false,
   useContainer: true,
-  additionalClasses: ["mt-2", "mb-4", "readex-pro", "readex-pro__medium"],
+  additionalClasses: ["mt-2", "mb-4"],
 
   navBarOptions: {
     variant: isDark ? "dark" : "light",
@@ -72,15 +73,10 @@ class ProductsPage extends PureComponent {
             {products.items.map((product, idx) => {
               return (
                 <Col className="col-6 text-center mt-3" sm={3} key={idx}>
-                  <Image className="products__image" src={product.image} />
-                  <div
-                    className={clsx([
-                      "products__title",
-                      isDark && "products__title-dark",
-                    ])}
-                  >
-                    {product.title}
-                  </div>
+                  <ProductBox
+                    handleClick={() => console.log(product)}
+                    product={product}
+                  />
                 </Col>
               );
             })}

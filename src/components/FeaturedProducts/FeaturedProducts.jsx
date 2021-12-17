@@ -3,6 +3,7 @@ import clsx from "clsx";
 import { Container, Row, Col, Image } from "react-bootstrap";
 
 import Header from "../Header/Header";
+import ProductBox from "../ProductBox/ProductBox";
 
 import productsData from "../../data/products_page_data.json";
 
@@ -52,10 +53,9 @@ const FeaturedProducts = () => {
           {featuredProducts.map((product, idx) => {
             return (
               <Col key={idx} className="col-4 h-scroll" sm={2}>
-                <Image
-                  onClick={() => setFeaturedProductInfo(product)}
-                  className="featured-product"
-                  src={product.image}
+                <ProductBox
+                  handleClick={() => setFeaturedProductInfo(product)}
+                  product={product}
                 />
               </Col>
             );

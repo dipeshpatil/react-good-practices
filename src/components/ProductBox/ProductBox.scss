@@ -1,0 +1,30 @@
+.product {
+  &__image {
+    width: 70%;
+    border-radius: 7px;
+  }
+
+  &__title {
+    margin-top: 10px;
+
+    &-dark {
+      color: #ffffff;
+    }
+  }
+
+  &:hover {
+    cursor: pointer;
+
+    .product__title {
+      color: #eb3b5a;
+      transition: 300ms ease-in-out;
+    }
+
+    .product__image {
+      box-shadow: 2px 1px 50px 1px #eb3b5a;
+      -webkit-box-shadow: 2px 1px 50px 1px #eb3b5a;
+      -moz-box-shadow: 2px 1px 50px 1px #eb3b5a;
+      transition: 300ms ease-in;
+    }
+  }
+}

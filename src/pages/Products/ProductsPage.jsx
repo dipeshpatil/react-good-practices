@@ -4,6 +4,7 @@ import { Row, Col } from "react-bootstrap";
 import BasePage from "../../components/BasePage/BasePage";
 import Header from "../../components/Header/Header";
 import ProductBox from "../../components/ProductBox/ProductBox";
+import ProductModal from "../../components/Modals/ProductModal/ProductModal";
 
 import productsData from "../../data/products_page_data.json";
 
@@ -34,9 +35,31 @@ const productCategoryMapping = {
 class ProductsPage extends PureComponent {
   constructor(props) {
     super(props);
-    this.state = {};
+    this.state = {
+      productOffcanvasShow: false,
+      offcanvasProduct: {},
+    };
   }
+
+  showProductOffcanvas = () => {
+    this.setState({ productOffcanvasShow: true });
+  };
+
+  hideProductOffcanvas = () => {
+    this.setState({ productOffcanvasShow: false });
+  };
+
+  setProductAndShowProductOffcanvas = (product = {}) => {
+    if (product !== {}) {
+      this.setState({ offcanvasProduct: product }, () =>
+        this.showProductOffcanvas()
+      );
+    }
+  };
+
   render() {
+    const { productOffcanvasShow, offcanvasProduct } = this.state;
+
     const productCategory = this.props.match.params.cat;
     let products = {};
     let allProducts = [];
@@ -73,7 +96,9 @@ class ProductsPage extends PureComponent {
               return (
                 <Col className="col-6 text-center mt-3" sm={3} key={idx}>
                   <ProductBox
-                    handleClick={() => console.log(product)}
+                    handleClick={() =>
+                      this.setProductAndShowProductOffcanvas(product)
+                    }
                     product={product}
                   />
                 </Col>
@@ -81,6 +106,11 @@ class ProductsPage extends PureComponent {
             })}
           </Row>
         )}
+        <ProductModal
+          product={offcanvasProduct}
+          show={productOffcanvasShow}
+          handleClose={() => this.hideProductOffcanvas()}
+        />
       </BasePage>
     );
   }

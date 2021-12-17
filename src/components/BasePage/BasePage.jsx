@@ -9,6 +9,10 @@ import Footer from "../Footer/Footer";
 
 import navBarLinks from "./../../data/navbar_data";
 
+import config from "../../config/config";
+
+const { appName, isDark } = config;
+
 const DEFAULT_OPTIONS = {
   fluidContainer: true,
   excludeNavbar: false,
@@ -17,10 +21,10 @@ const DEFAULT_OPTIONS = {
   additionalClasses: [],
 
   navBarOptions: {
-    variant: "light",
-    background: "light",
-    title: "Navbar",
-    orientation: "start",
+    variant: isDark ? "dark" : "light",
+    background: isDark ? "dark" : "light",
+    title: appName,
+    orientation: "end",
   },
 };
 

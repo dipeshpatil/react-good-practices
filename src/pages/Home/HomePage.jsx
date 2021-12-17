@@ -10,20 +10,16 @@ import VerticalDock from "../../components/VerticalDock/VerticalDock";
 import carouselData from "../../data/carousel_data.json";
 import verticalDockData from "../../data/vertical_dock_data.json";
 
+// Config
+import config from "../../config/config";
+
 import "./HomePage.scss";
 
-const isDark = JSON.parse(localStorage.isDark ?? null) || false;
+const { appName, isDark } = config;
 
 const homePageOptions = {
   fluidContainer: true,
   useContainer: false,
-
-  navBarOptions: {
-    variant: isDark ? "dark" : "light",
-    background: isDark ? "dark" : "light",
-    title: "IMPRIMEX",
-    orientation: "end",
-  },
 };
 
 class HomePage extends PureComponent {

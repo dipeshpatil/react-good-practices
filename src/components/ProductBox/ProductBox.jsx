@@ -4,9 +4,11 @@ import clsx from "clsx";
 
 import { Image } from "react-bootstrap";
 
+import config from "../../config/config";
+
 import "./ProductBox.scss";
 
-const isDark = JSON.parse(localStorage.isDark ?? null) || false;
+const { isDark } = config;
 
 const ProductBox = ({ product = {}, handleClick }) => {
   return (

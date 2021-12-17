@@ -7,9 +7,11 @@ import ProductBox from "../ProductBox/ProductBox";
 
 import productsData from "../../data/products_page_data.json";
 
+import config from "../../config/config";
+
 import "./FeaturedProducts.scss";
 
-const isDark = JSON.parse(localStorage.isDark ?? null) || false;
+const { isDark } = config;
 
 const screen = {
   width: window.screen.width,

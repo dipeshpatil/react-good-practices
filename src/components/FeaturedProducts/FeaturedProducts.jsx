@@ -11,6 +11,11 @@ import "./FeaturedProducts.scss";
 
 const isDark = JSON.parse(localStorage.isDark ?? null) || false;
 
+const screen = {
+  width: window.screen.width,
+  height: window.screen.height,
+};
+
 const productCategoryMapping = {
   mfp: "multifunctional_printers",
   cp: "consumer_printers",
@@ -44,11 +49,9 @@ const FeaturedProducts = () => {
           isDark && "text-light",
         ]}
       >
-        <i className="bi bi-arrow-left"></i>
-        &nbsp; Featured Products &nbsp;
-        <i className="bi bi-arrow-right"></i>
+        Featured Products
       </Header>
-      <Row className="mt-3">
+      <Row>
         <div className="scrollmenu">
           {featuredProducts.map((product, idx) => {
             return (
@@ -76,7 +79,6 @@ const FeaturedProducts = () => {
             "readex-pro",
             "featured-product-info",
             "px-4",
-            "mt-3",
             isDark && "text-light",
           ])}
           sm={8}
@@ -87,7 +89,7 @@ const FeaturedProducts = () => {
               "text-start",
               "readex-pro",
               "readex-pro__medium",
-              "mt-3",
+              screen.width >= 320 && screen.width <= 450 && "mt-3",
             ]}
           >
             {featuredProductInfo.title}

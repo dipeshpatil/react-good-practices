@@ -12,7 +12,7 @@ const screen = {
 };
 
 const ProductModal = ({ product = {}, handleClose, show }) => {
-  const { title, description, image, tags } = product;
+  const { title, description, image, tags, featured } = product;
 
   return (
     <Modal size="xl" show={show ?? false} onHide={handleClose}>
@@ -57,6 +57,19 @@ const ProductModal = ({ product = {}, handleClose, show }) => {
                 </div>
               )}
               {description}
+              {featured && (
+                <div
+                  className={clsx([
+                    "featured",
+                    "readex-pro",
+                    "readex-pro__light",
+                  ])}
+                >
+                  <span className="featured-tag">
+                    Featured Product <i class="bi bi-check-circle-fill" />
+                  </span>
+                </div>
+              )}
             </Col>
           </Row>
         </Container>

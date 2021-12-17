@@ -2,31 +2,31 @@
   {
     "id": 1,
     "itemName": "Demos",
-    "iconURL": "https://cdn-icons-png.flaticon.com/512/4568/4568874.png"
+    "iconURL": "http://imprimo.co.in/images/drawables/printer.svg"
   },
   {
     "id": 2,
     "itemName": "Services",
-    "iconURL": "https://cdn-icons-png.flaticon.com/512/4568/4568755.png"
+    "iconURL": "http://imprimo.co.in/images/drawables/wrench.svg"
   },
   {
     "id": 3,
     "itemName": "Replace",
-    "iconURL": "https://cdn-icons-png.flaticon.com/512/4568/4568882.png"
+    "iconURL": "http://imprimo.co.in/images/drawables/exchange.svg"
   },
   {
     "id": 4,
     "itemName": "Offers",
-    "iconURL": "https://cdn-icons-png.flaticon.com/512/4568/4568928.png"
+    "iconURL": "http://imprimo.co.in/images/drawables/announce.svg"
   },
   {
     "id": 5,
     "itemName": "Support",
-    "iconURL": "https://cdn-icons-png.flaticon.com/512/4568/4568701.png"
+    "iconURL": "http://imprimo.co.in/images/drawables/about.svg"
   },
   {
     "id": 6,
     "itemName": "Donate",
-    "iconURL": "https://cdn-icons-png.flaticon.com/512/4568/4568719.png"
+    "iconURL": "http://imprimo.co.in/images/drawables/rupee.svg"
   }
 ]

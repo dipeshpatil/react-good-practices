@@ -11,6 +11,8 @@ import navBarLinks from "./../../data/navbar_data";
 
 import config from "../../config/config";
 
+import "./BasePage.scss";
+
 const { appName, isDark } = config;
 
 const DEFAULT_OPTIONS = {

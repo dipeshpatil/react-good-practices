@@ -10,12 +10,7 @@ import VerticalDock from "../../components/VerticalDock/VerticalDock";
 import carouselData from "../../data/carousel_data.json";
 import verticalDockData from "../../data/vertical_dock_data.json";
 
-// Config
-import config from "../../config/config";
-
 import "./HomePage.scss";
-
-const { appName, isDark } = config;
 
 const homePageOptions = {
   fluidContainer: true,

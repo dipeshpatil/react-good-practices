@@ -18,7 +18,7 @@ const DEFAULT_OPTIONS = {
   excludeNavbar: false,
   excludeFooter: false,
   useContainer: true,
-  additionalClasses: [],
+  additionalClasses: [isDark && "dark-page"],
 
   navBarOptions: {
     variant: isDark ? "dark" : "light",
@@ -48,9 +48,10 @@ const BasePage = ({ children, pageOptions = DEFAULT_OPTIONS }) => {
       )}
       {useContainer ?? DEFAULT_OPTIONS.useContainer ? (
         <Container
-          className={clsx(
-            additionalClasses ?? DEFAULT_OPTIONS.additionalClasses
-          )}
+          className={clsx([
+            additionalClasses,
+            ...DEFAULT_OPTIONS.additionalClasses,
+          ])}
           fluid={fluidContainer ?? DEFAULT_OPTIONS.fluidContainer}
         >
           {children}

@@ -12,8 +12,6 @@ import config from "../../config/config";
 
 import "./ProductsPage.scss";
 
-const { isDark } = config;
-
 const productPageOptions = {
   fluidContainer: false,
   useContainer: true,

@@ -29,6 +29,7 @@ const Footer = () => {
             return (
               <Col key={idx} className="col-6" sm={3}>
                 <Header
+                  text={footerData[sequence].category}
                   size={4}
                   additionalClasses={[
                     "footer__menu-title",
@@ -37,9 +38,7 @@ const Footer = () => {
                     "readex-pro__medium",
                     "text-danger",
                   ]}
-                >
-                  {footerData[sequence].category}
-                </Header>
+                />
                 <FooterLinksListGroup
                   listType="unordered"
                   listData={footerData[sequence].links}

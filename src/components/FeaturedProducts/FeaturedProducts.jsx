@@ -43,6 +43,7 @@ const FeaturedProducts = () => {
   return (
     <Container className={clsx([isDark && "dark-page", "mt-3", "mb-4"])}>
       <Header
+        text="Featured Products"
         size={1}
         additionalClasses={[
           "text-center",
@@ -50,9 +51,7 @@ const FeaturedProducts = () => {
           "readex-pro__medium",
           "text-brand-1",
         ]}
-      >
-        Featured Products
-      </Header>
+      />
       <Row>
         <div className="scrollmenu">
           {featuredProducts.map((product, idx) => {
@@ -86,6 +85,7 @@ const FeaturedProducts = () => {
           sm={8}
         >
           <Header
+            text={featuredProductInfo.title}
             size={2}
             additionalClasses={[
               "text-start",
@@ -93,9 +93,7 @@ const FeaturedProducts = () => {
               "readex-pro__medium",
               screen.width >= 320 && screen.width <= 450 && "mt-3",
             ]}
-          >
-            {featuredProductInfo.title}
-          </Header>
+          />
           {featuredProductInfo.description}
         </Col>
       </Row>

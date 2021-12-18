@@ -8,8 +8,6 @@ import ProductModal from "../../components/Modals/ProductModal/ProductModal";
 
 import productsData from "../../data/products_page_data.json";
 
-import config from "../../config/config";
-
 import "./ProductsPage.scss";
 
 const productPageOptions = {

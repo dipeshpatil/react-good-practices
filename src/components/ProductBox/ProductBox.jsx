@@ -10,7 +10,11 @@ import "./ProductBox.scss";
 
 const { isDark } = config;
 
-const ProductBox = ({ product = {}, handleClick }) => {
+const ProductBox = ({
+  product = {},
+  handleClick,
+  disableFeatureIcon = false,
+}) => {
   return (
     <div className="product" onClick={() => handleClick(product)}>
       <Image className="product__image" src={product.image} />
@@ -22,7 +26,10 @@ const ProductBox = ({ product = {}, handleClick }) => {
           "readex-pro__medium",
         ])}
       >
-        {product.title}
+        {product.title}{" "}
+        {product.featured && !disableFeatureIcon && (
+          <i className="bi bi-check-circle-fill featured-product-tint" />
+        )}
       </div>
     </div>
   );
@@ -31,6 +38,7 @@ const ProductBox = ({ product = {}, handleClick }) => {
 ProductBox.propTypes = {
   product: PropTypes.object.isRequired,
   handleClick: PropTypes.func.isRequired,
+  disableFeatureIcon: PropTypes.bool,
 };
 
 export default ProductBox;

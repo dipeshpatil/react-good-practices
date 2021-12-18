@@ -55,6 +55,7 @@ const FeaturedProducts = () => {
                 <ProductBox
                   handleClick={() => setFeaturedProductInfo(product)}
                   product={product}
+                  disableFeatureIcon={true}
                 />
               </Col>
             );

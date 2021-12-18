@@ -8,21 +8,16 @@ import ProductModal from "../../components/Modals/ProductModal/ProductModal";
 
 import productsData from "../../data/products_page_data.json";
 
+import config from "../../config/config";
+
 import "./ProductsPage.scss";
 
-const isDark = JSON.parse(localStorage.isDark ?? null) || false;
+const { isDark } = config;
 
 const productPageOptions = {
   fluidContainer: false,
   useContainer: true,
   additionalClasses: ["mt-2", "mb-4"],
-
-  navBarOptions: {
-    variant: isDark ? "dark" : "light",
-    background: isDark ? "dark" : "light",
-    title: "IMPRIMEX",
-    orientation: "end",
-  },
 };
 
 const productCategoryMapping = {
@@ -36,29 +31,27 @@ class ProductsPage extends PureComponent {
   constructor(props) {
     super(props);
     this.state = {
-      productOffcanvasShow: false,
-      offcanvasProduct: {},
+      productModalShow: false,
+      modalProduct: {},
     };
   }
 
-  showProductOffcanvas = () => {
-    this.setState({ productOffcanvasShow: true });
+  showProductModal = () => {
+    this.setState({ productModalShow: true });
   };
 
-  hideProductOffcanvas = () => {
-    this.setState({ productOffcanvasShow: false });
+  hideProductModal = () => {
+    this.setState({ productModalShow: false });
   };
 
-  setProductAndShowProductOffcanvas = (product = {}) => {
+  setProductAndShowProductModal = (product = {}) => {
     if (product !== {}) {
-      this.setState({ offcanvasProduct: product }, () =>
-        this.showProductOffcanvas()
-      );
+      this.setState({ modalProduct: product }, () => this.showProductModal());
     }
   };
 
   render() {
-    const { productOffcanvasShow, offcanvasProduct } = this.state;
+    const { productModalShow, modalProduct } = this.state;
 
     const productCategory = this.props.match.params.cat;
     let products = {};
@@ -97,7 +90,7 @@ class ProductsPage extends PureComponent {
                 <Col className="col-6 text-center mt-3" sm={3} key={idx}>
                   <ProductBox
                     handleClick={() =>
-                      this.setProductAndShowProductOffcanvas(product)
+                      this.setProductAndShowProductModal(product)
                     }
                     product={product}
                   />
@@ -107,9 +100,9 @@ class ProductsPage extends PureComponent {
           </Row>
         )}
         <ProductModal
-          product={offcanvasProduct}
-          show={productOffcanvasShow}
-          handleClose={() => this.hideProductOffcanvas()}
+          product={modalProduct}
+          show={productModalShow}
+          handleClose={() => this.hideProductModal()}
         />
       </BasePage>
     );

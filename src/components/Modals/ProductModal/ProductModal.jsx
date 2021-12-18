@@ -15,6 +15,8 @@ const screen = {
   height: window.screen.height,
 };
 
+const isMobile = screen.width >= 320 && screen.width <= 450;
+
 const ProductModal = ({ product = {}, handleClose, show }) => {
   const { title, description, image, tags, featured } = product;
 
@@ -22,6 +24,7 @@ const ProductModal = ({ product = {}, handleClose, show }) => {
     <Modal
       className={clsx(["product-modal", isDark && "product-modal__dark"])}
       size="xl"
+      fullscreen={isMobile}
       show={show ?? false}
       onHide={handleClose}
     >
@@ -35,7 +38,7 @@ const ProductModal = ({ product = {}, handleClose, show }) => {
       <Modal.Body>
         <Container className={clsx(["p-2"])} fluid>
           <Row>
-            <Col sm={4}>
+            <Col sm={4} md={4} lg={4}>
               <center>
                 <Image className="featured-product-image" src={image} />
               </center>
@@ -48,6 +51,8 @@ const ProductModal = ({ product = {}, handleClose, show }) => {
                 "readex-pro__light",
               ])}
               sm={8}
+              md={8}
+              lg={8}
             >
               {(tags ?? []).length > 0 && (
                 <div className={clsx(["product-tags", "mb-3"])}>

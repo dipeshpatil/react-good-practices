@@ -8,8 +8,9 @@ const DEFAULT_HEADER_CLASS = ["roboto"];
 
 const Header = ({ children, size = 1, additionalClasses = [] }) => {
   const headerClasses = clsx([...DEFAULT_HEADER_CLASS, ...additionalClasses]);
+  const headerSize = isNaN(size) ? 1 : parseInt(size);
 
-  switch (parseInt(size)) {
+  switch (headerSize) {
     case 6:
       return <h6 className={headerClasses}>{children}</h6>;
     case 5:
@@ -28,7 +29,7 @@ const Header = ({ children, size = 1, additionalClasses = [] }) => {
 
 Header.propTypes = {
   text: PropTypes.string,
-  size: PropTypes.number,
+  size: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
   additionalClasses: PropTypes.array,
 };
 

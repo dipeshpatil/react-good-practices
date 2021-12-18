@@ -78,7 +78,7 @@ class ProductsPage extends PureComponent {
             "readex-pro",
             "readex-pro__medium",
             "mt-3",
-            isDark && "text-danger",
+            "text-danger",
           ]}
         >
           {products.category}

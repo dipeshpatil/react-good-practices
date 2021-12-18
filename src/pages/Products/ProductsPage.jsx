@@ -5,10 +5,15 @@ import BasePage from "../../components/BasePage/BasePage";
 import Header from "../../components/Header/Header";
 import ProductBox from "../../components/ProductBox/ProductBox";
 import ProductModal from "../../components/Modals/ProductModal/ProductModal";
+import AllProductsSectionWise from "../../components/AllProductsSectionWise/AllProductsSectionWise";
 
 import productsData from "../../data/products_page_data.json";
 
+import config from "../../config/config";
+
 import "./ProductsPage.scss";
+
+const { isDark } = config;
 
 const productPageOptions = {
   fluidContainer: false,
@@ -60,7 +65,7 @@ class ProductsPage extends PureComponent {
         );
       });
       products.items = allProducts;
-      products.category = "Products";
+      products.category = "Our Products";
     } else {
       products = productsData.products[productCategoryMapping[productCategory]];
     }
@@ -68,22 +73,34 @@ class ProductsPage extends PureComponent {
     return (
       <BasePage pageOptions={productPageOptions}>
         <Header
+          text={products.category}
           size={1}
           additionalClasses={[
             "text-center",
             "readex-pro",
             "readex-pro__medium",
             "mt-3",
-            "text-danger",
+            productCategory !== "all"
+              ? "text-danger"
+              : isDark
+              ? "text-light"
+              : "text-dark",
           ]}
-        >
-          {products.category}
-        </Header>
-        {products.items.length > 0 && (
+        />
+        {products.items.length > 0 && productCategory !== "all" ? (
           <Row className="products">
             {products.items.map((product, idx) => {
               return (
-                <Col className="col-6 text-center mt-3" sm={3} key={idx}>
+                <Col
+                  className="text-center mt-3"
+                  key={idx}
+                  xs={6}
+                  sm={6}
+                  md={4}
+                  lg={3}
+                  xl={2}
+                  xxl={2}
+                >
                   <ProductBox
                     handleClick={() =>
                       this.setProductAndShowProductModal(product)
@@ -94,12 +111,19 @@ class ProductsPage extends PureComponent {
               );
             })}
           </Row>
+        ) : (
+          <AllProductsSectionWise
+            productsData={productsData}
+            productCategoryMapping={productCategoryMapping}
+          />
         )}
-        <ProductModal
-          product={modalProduct}
-          show={productModalShow}
-          handleClose={() => this.hideProductModal()}
-        />
+        {productCategory !== "all" && (
+          <ProductModal
+            product={modalProduct}
+            show={productModalShow}
+            handleClose={() => this.hideProductModal()}
+          />
+        )}
       </BasePage>
     );
   }

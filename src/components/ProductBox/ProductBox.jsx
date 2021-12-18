@@ -12,7 +12,7 @@ const { isDark } = config;
 
 const ProductBox = ({ product = {}, handleClick }) => {
   return (
-    <div className="product" onClick={(product) => handleClick(product)}>
+    <div className="product" onClick={() => handleClick(product)}>
       <Image className="product__image" src={product.image} />
       <div
         className={clsx([

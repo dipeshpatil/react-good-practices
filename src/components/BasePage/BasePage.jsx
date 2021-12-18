@@ -51,8 +51,8 @@ const BasePage = ({ children, pageOptions = DEFAULT_OPTIONS }) => {
       {useContainer ?? DEFAULT_OPTIONS.useContainer ? (
         <Container
           className={clsx([
-            additionalClasses,
             ...DEFAULT_OPTIONS.additionalClasses,
+            additionalClasses,
           ])}
           fluid={fluidContainer ?? DEFAULT_OPTIONS.fluidContainer}
         >

@@ -48,7 +48,6 @@ const FeaturedProducts = () => {
           "text-center",
           "readex-pro",
           "readex-pro__medium",
-          // isDark && "text-light",
           "text-brand-1",
         ]}
       >

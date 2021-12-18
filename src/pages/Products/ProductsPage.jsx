@@ -5,10 +5,15 @@ import BasePage from "../../components/BasePage/BasePage";
 import Header from "../../components/Header/Header";
 import ProductBox from "../../components/ProductBox/ProductBox";
 import ProductModal from "../../components/Modals/ProductModal/ProductModal";
+import AllProductsSectionWise from "../../components/AllProductsSectionWise/AllProductsSectionWise";
 
 import productsData from "../../data/products_page_data.json";
 
+import config from "../../config/config";
+
 import "./ProductsPage.scss";
+
+const { isDark } = config;
 
 const productPageOptions = {
   fluidContainer: false,
@@ -60,7 +65,7 @@ class ProductsPage extends PureComponent {
         );
       });
       products.items = allProducts;
-      products.category = "Products";
+      products.category = "Our Products";
     } else {
       products = productsData.products[productCategoryMapping[productCategory]];
     }
@@ -75,10 +80,14 @@ class ProductsPage extends PureComponent {
             "readex-pro",
             "readex-pro__medium",
             "mt-3",
-            "text-danger",
+            productCategory !== "all"
+              ? "text-danger"
+              : isDark
+              ? "text-light"
+              : "text-dark",
           ]}
         />
-        {products.items.length > 0 && (
+        {products.items.length > 0 && productCategory !== "all" ? (
           <Row className="products">
             {products.items.map((product, idx) => {
               return (
@@ -102,12 +111,19 @@ class ProductsPage extends PureComponent {
               );
             })}
           </Row>
+        ) : (
+          <AllProductsSectionWise
+            productsData={productsData}
+            productCategoryMapping={productCategoryMapping}
+          />
         )}
-        <ProductModal
-          product={modalProduct}
-          show={productModalShow}
-          handleClose={() => this.hideProductModal()}
-        />
+        {productCategory !== "all" && (
+          <ProductModal
+            product={modalProduct}
+            show={productModalShow}
+            handleClose={() => this.hideProductModal()}
+          />
+        )}
       </BasePage>
     );
   }

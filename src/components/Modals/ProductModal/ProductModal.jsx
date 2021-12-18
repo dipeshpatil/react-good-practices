@@ -80,7 +80,7 @@ const ProductModal = ({ product = {}, handleClose, show }) => {
                   ])}
                 >
                   <span className="featured-tag">
-                    Featured Product <i class="bi bi-check-circle-fill" />
+                    Featured Product <i className="bi bi-check-circle-fill" />
                   </span>
                 </div>
               )}

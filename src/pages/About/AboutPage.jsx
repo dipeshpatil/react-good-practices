@@ -51,6 +51,7 @@ class AboutPage extends PureComponent {
         </div>
         <div className="px-3 mb-3">
           <Header
+            text="Office Address"
             size={3}
             additionalClasses={[
               "text-start",
@@ -58,9 +59,7 @@ class AboutPage extends PureComponent {
               "readex-pro__medium",
               isDark && "text-light",
             ]}
-          >
-            Office Address
-          </Header>
+          />
           <Row>
             <Col sm={4}>
               <div>

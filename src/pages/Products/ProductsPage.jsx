@@ -68,6 +68,7 @@ class ProductsPage extends PureComponent {
     return (
       <BasePage pageOptions={productPageOptions}>
         <Header
+          text={products.category}
           size={1}
           additionalClasses={[
             "text-center",
@@ -76,9 +77,7 @@ class ProductsPage extends PureComponent {
             "mt-3",
             "text-danger",
           ]}
-        >
-          {products.category}
-        </Header>
+        />
         {products.items.length > 0 && (
           <Row className="products">
             {products.items.map((product, idx) => {

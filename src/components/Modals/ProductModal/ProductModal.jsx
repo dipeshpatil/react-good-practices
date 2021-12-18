@@ -10,8 +10,6 @@ import "./ProductModal.scss";
 
 const { isDark, isDevice } = config;
 
-const isMobile = screen.width >= 320 && screen.width <= 450;
-
 const ProductModal = ({ product = {}, handleClose, show }) => {
   const { title, description, image, tags, featured } = product;
 
@@ -19,7 +17,7 @@ const ProductModal = ({ product = {}, handleClose, show }) => {
     <Modal
       className={clsx(["product-modal", isDark && "product-modal__dark"])}
       size="xl"
-      fullscreen={isMobile}
+      fullscreen={isDevice}
       show={show ?? false}
       onHide={handleClose}
     >

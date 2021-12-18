@@ -1,23 +1,23 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "aa9677787ce57059189de44a46b827f0",
+    "revision": "0bec3d7ace95b5118053443173324e40",
     "url": "/react-good-practices/index.html"
   },
   {
-    "revision": "1a06d63002b71282e7f8",
+    "revision": "5b52067c6011ded96086",
     "url": "/react-good-practices/static/css/main.c975e664.chunk.css"
   },
   {
-    "revision": "c574dbf2547988a37484",
-    "url": "/react-good-practices/static/js/2.63adc237.chunk.js"
+    "revision": "e2f86e2b0090aba97622",
+    "url": "/react-good-practices/static/js/2.b6eacea0.chunk.js"
   },
   {
     "revision": "1bde7cbddc37293b60694441b834365b",
-    "url": "/react-good-practices/static/js/2.63adc237.chunk.js.LICENSE.txt"
+    "url": "/react-good-practices/static/js/2.b6eacea0.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "1a06d63002b71282e7f8",
-    "url": "/react-good-practices/static/js/main.8f0f6290.chunk.js"
+    "revision": "5b52067c6011ded96086",
+    "url": "/react-good-practices/static/js/main.1710a918.chunk.js"
   },
   {
     "revision": "ea2e96c4ab9016e005a0",

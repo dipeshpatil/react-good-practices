@@ -13,23 +13,39 @@ const { isDark } = config;
 const ProductBox = ({
   product = {},
   handleClick,
-  disableFeatureIcon = false,
+  disableFeatureTint = false,
 }) => {
+  const isFeatured = product.featured;
+  const isFeaturedAndTintNotDisabled = isFeatured && !disableFeatureTint;
+
   return (
     <div className="product" onClick={() => handleClick(product)}>
-      <Image className="product__image" src={product.image} />
+      <Image
+        className={clsx([
+          "product__image",
+          isFeaturedAndTintNotDisabled
+            ? "product__image__featured-tint"
+            : disableFeatureTint
+            ? null
+            : "product__image__product-tint",
+          isFeaturedAndTintNotDisabled
+            ? "product__image__featured-shadowtint"
+            : "product__image__normal-shadowtint",
+        ])}
+        src={product.image}
+      />
       <div
         className={clsx([
           "product__title",
+          isFeaturedAndTintNotDisabled
+            ? "product__title__featured"
+            : "product__title__normal",
           isDark && "product__title-dark",
           "readex-pro",
           "readex-pro__medium",
         ])}
       >
-        {product.title}{" "}
-        {product.featured && !disableFeatureIcon && (
-          <i className="bi bi-check-circle-fill featured-product-tint" />
-        )}
+        {product.title}
       </div>
     </div>
   );
@@ -38,7 +54,7 @@ const ProductBox = ({
 ProductBox.propTypes = {
   product: PropTypes.object.isRequired,
   handleClick: PropTypes.func.isRequired,
-  disableFeatureIcon: PropTypes.bool,
+  disableFeatureTint: PropTypes.bool,
 };
 
 export default ProductBox;

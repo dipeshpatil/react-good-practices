@@ -1,8 +1,17 @@
+$normalTint: #eb3b5a;
+$featuredTint: #1abc9c;
+
 .product {
   &__image {
     width: 70%;
     border-radius: 7px;
-    border-bottom: 3px solid #eb3b5a;
+    &__product-tint {
+      border-bottom: 3px solid $normalTint;
+    }
+
+    &__featured-tint {
+      border-bottom: 3px solid $featuredTint;
+    }
   }
 
   &__title {
@@ -17,20 +26,27 @@
     cursor: pointer;
 
     .product__title {
-      color: #eb3b5a;
+      &__normal {
+        color: $normalTint;
+      }
+      &__featured {
+        color: $featuredTint;
+      }
       transition: 300ms ease-in-out;
     }
 
     .product__image {
-      box-shadow: 2px 1px 50px 1px #eb3b5a;
-      -webkit-box-shadow: 2px 1px 50px 1px #eb3b5a;
-      -moz-box-shadow: 2px 1px 50px 1px #eb3b5a;
-      border-bottom: 3px solid transparent;
+      &__normal-shadowtint {
+        box-shadow: 2px 1px 50px 1px $normalTint;
+        -webkit-box-shadow: 2px 1px 50px 1px $normalTint;
+        -moz-box-shadow: 2px 1px 50px 1px $normalTint;
+      }
+      &__featured-shadowtint {
+        box-shadow: 2px 1px 50px 1px $featuredTint;
+        -webkit-box-shadow: 2px 1px 50px 1px $featuredTint;
+        -moz-box-shadow: 2px 1px 50px 1px $featuredTint;
+      }
       transition: 300ms ease-in;
     }
   }
-}
-
-.featured-product-tint {
-  color: #2ecc71;
 }

@@ -11,12 +11,7 @@ import config from "../../config/config";
 
 import "./FeaturedProducts.scss";
 
-const { isDark } = config;
-
-const screen = {
-  width: window.screen.width,
-  height: window.screen.height,
-};
+const { isDark, isDevice } = config;
 
 const productCategoryMapping = {
   mfp: "multifunctional_printers",
@@ -91,7 +86,7 @@ const FeaturedProducts = () => {
               "text-start",
               "readex-pro",
               "readex-pro__medium",
-              screen.width >= 320 && screen.width <= 450 && "mt-3",
+              isDevice && "mt-3",
             ]}
           />
           {featuredProductInfo.description}

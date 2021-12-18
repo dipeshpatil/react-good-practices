@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import PropTypes from "prop-types";
+import clsx from "clsx";
 
 import { Row, Col } from "react-bootstrap";
 
@@ -8,9 +9,8 @@ import ProductBox from "../ProductBox/ProductBox";
 import ProductModal from "../Modals/ProductModal/ProductModal";
 
 import config from "../../config/config";
-import clsx from "clsx";
 
-const { isDevice, isDark } = config;
+const { isDevice } = config;
 
 const AllProductsSectionWise = ({
   productsData = {},
@@ -87,7 +87,6 @@ const AllProductsSectionWise = ({
 };
 
 AllProductsSectionWise.propTypes = {
-  title: PropTypes.string,
   products: PropTypes.object,
   productCategoryMapping: PropTypes.object,
 };

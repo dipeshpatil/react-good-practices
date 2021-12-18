@@ -8,12 +8,7 @@ import config from "../../../config/config";
 
 import "./ProductModal.scss";
 
-const { isDark } = config;
-
-const screen = {
-  width: window.screen.width,
-  height: window.screen.height,
-};
+const { isDark, isDevice } = config;
 
 const isMobile = screen.width >= 320 && screen.width <= 450;
 
@@ -45,7 +40,7 @@ const ProductModal = ({ product = {}, handleClose, show }) => {
             </Col>
             <Col
               className={clsx([
-                screen.width >= 320 && screen.width <= 450 && "mt-3",
+                isDevice && "mt-3",
                 "text-justify",
                 "readex-pro",
                 "readex-pro__light",

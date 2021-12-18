@@ -2,6 +2,7 @@
   &__image {
     width: 70%;
     border-radius: 7px;
+    border-bottom: 3px solid #eb3b5a;
   }
 
   &__title {
@@ -24,7 +25,12 @@
       box-shadow: 2px 1px 50px 1px #eb3b5a;
       -webkit-box-shadow: 2px 1px 50px 1px #eb3b5a;
       -moz-box-shadow: 2px 1px 50px 1px #eb3b5a;
+      border-bottom: 3px solid transparent;
       transition: 300ms ease-in;
     }
   }
+}
+
+.featured-product-tint {
+  color: #2ecc71;
 }

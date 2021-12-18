@@ -83,7 +83,16 @@ class ProductsPage extends PureComponent {
           <Row className="products">
             {products.items.map((product, idx) => {
               return (
-                <Col className="col-6 text-center mt-3" sm={3} key={idx}>
+                <Col
+                  className="text-center mt-3"
+                  key={idx}
+                  xs={6}
+                  sm={6}
+                  md={4}
+                  lg={3}
+                  xl={2}
+                  xxl={2}
+                >
                   <ProductBox
                     handleClick={() =>
                       this.setProductAndShowProductModal(product)

@@ -55,6 +55,13 @@ const TextWithSideLabel = ({
   );
 };
 
+DecideOrientationComponent.propTypes = {
+  orientation: PropTypes.string,
+  placeholder: PropTypes.string,
+  labelText: PropTypes.string,
+  textRef: PropTypes.any,
+}
+
 TextWithSideLabel.propTypes = {
   size: PropTypes.string,
   textPlaceHolder: PropTypes.string,

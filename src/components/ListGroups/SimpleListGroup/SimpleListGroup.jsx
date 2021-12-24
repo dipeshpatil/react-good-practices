@@ -1,3 +1,4 @@
+import React from "react";
 import PropTypes from "prop-types";
 
 import { ListGroup } from "react-bootstrap";
@@ -35,6 +36,7 @@ DispatchSubList.propTypes = {
 SimpleListGroup.propTypes = {
   listData: PropTypes.array,
   subList: PropTypes.bool,
+  variant: PropTypes.string
 };
 
 export default SimpleListGroup;

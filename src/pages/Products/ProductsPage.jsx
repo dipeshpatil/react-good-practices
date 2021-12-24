@@ -1,4 +1,5 @@
 import React, { PureComponent } from "react";
+import PropTypes from "prop-types";
 import clsx from "clsx";
 import { Row, Col } from "react-bootstrap";
 
@@ -120,6 +121,14 @@ class ProductsPage extends PureComponent {
       </BasePage>
     );
   }
+}
+
+ProductsPage.propTypes = {
+  match: PropTypes.shape({
+    params: PropTypes.shape({
+      cat: PropTypes.string,
+    }),
+  }).isRequired,
 }
 
 export default ProductsPage;

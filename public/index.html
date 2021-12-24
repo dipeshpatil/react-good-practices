@@ -43,7 +43,7 @@
   <script>
     const isDark = JSON.parse(localStorage.isDark ?? null) || false;
     if (isDark) {
-      document.getElementById("root").classList.add("dark-page");
+      document.getElementsByTagName("body")[0].classList.add("dark-page");
     }
   </script>
 </html>

@@ -1,11 +1,11 @@
 import React, { PureComponent } from "react";
+import clsx from "clsx";
 import { Row, Col } from "react-bootstrap";
 
 import BasePage from "../../components/BasePage/BasePage";
 import Header from "../../components/Header/Header";
 import ProductBox from "../../components/ProductBox/ProductBox";
 import ProductModal from "../../components/Modals/ProductModal/ProductModal";
-import AllProductsSectionWise from "../../components/AllProductsSectionWise/AllProductsSectionWise";
 
 import productsData from "../../data/products_page_data.json";
 
@@ -13,7 +13,7 @@ import config from "../../config/config";
 
 import "./ProductsPage.scss";
 
-const { isDark } = config;
+const { isDevice } = config;
 
 const productPageOptions = {
   fluidContainer: false,
@@ -53,77 +53,70 @@ class ProductsPage extends PureComponent {
 
   render() {
     const { productModalShow, modalProduct } = this.state;
-
     const productCategory = this.props.match.params.cat;
-    let products = {};
-    let allProducts = [];
+    const __products = [];
 
     if (productCategory === "all") {
       Object.keys(productCategoryMapping).map((category) => {
-        return allProducts.push(
-          ...productsData.products[productCategoryMapping[category]].items
+        return __products.push(
+          productsData.products[productCategoryMapping[category]]
         );
       });
-      products.items = allProducts;
-      products.category = "Our Products";
     } else {
-      products = productsData.products[productCategoryMapping[productCategory]];
+      __products.push(
+        productsData.products[productCategoryMapping[productCategory]]
+      );
     }
 
     return (
       <BasePage pageOptions={productPageOptions}>
-        <Header
-          text={products.category}
-          size={1}
-          additionalClasses={[
-            "text-center",
-            "readex-pro",
-            "readex-pro__medium",
-            "mt-3",
-            productCategory !== "all"
-              ? "text-danger"
-              : isDark
-              ? "text-light"
-              : "text-dark",
-          ]}
+        {__products.length > 0 &&
+          __products.map((product, idx) => {
+            return (
+              <div key={idx}>
+                <Header
+                  text={product.category}
+                  size={1}
+                  additionalClasses={[
+                    isDevice ? "text-center" : "text-start",
+                    "readex-pro",
+                    "readex-pro__medium",
+                    "mt-3",
+                    "text-danger",
+                  ]}
+                />
+                <Row className="products">
+                  {product.items.map((productItem, iidx) => {
+                    return (
+                      <Col
+                        className={clsx(["text-center", "mt-3"])}
+                        key={iidx}
+                        xs={6}
+                        sm={6}
+                        md={4}
+                        lg={3}
+                        xl={2}
+                        xxl={2}
+                      >
+                        <ProductBox
+                          handleClick={() =>
+                            this.setProductAndShowProductModal(productItem)
+                          }
+                          product={productItem}
+                        />
+                      </Col>
+                    );
+                  })}
+                  <div className="mt-4" />
+                </Row>
+              </div>
+            );
+          })}
+        <ProductModal
+          product={modalProduct}
+          show={productModalShow}
+          handleClose={() => this.hideProductModal()}
         />
-        {products.items.length > 0 && productCategory !== "all" ? (
-          <Row className="products">
-            {products.items.map((product, idx) => {
-              return (
-                <Col
-                  className="text-center mt-3"
-                  key={idx}
-                  xs={6}
-                  sm={6}
-                  md={4}
-                  lg={3}
-                  xl={2}
-                  xxl={2}
-                >
-                  <ProductBox
-                    handleClick={() =>
-                      this.setProductAndShowProductModal(product)
-                    }
-                    product={product}
-                  />
-                </Col>
-              );
-            })}
-          </Row>
-        ) : (
-          <AllProductsSectionWise
-            productsData={productsData}
-            productCategoryMapping={productCategoryMapping}
-          />
-        )}
-        {productCategory !== "all" && (
-          <ProductModal
-            product={modalProduct}
-            show={productModalShow}
-            handleClose={() => this.hideProductModal()}
-          />
-        )}
       </BasePage>
     );
   }

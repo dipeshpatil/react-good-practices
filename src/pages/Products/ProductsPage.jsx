@@ -38,19 +38,19 @@ class ProductsPage extends PureComponent {
     };
   }
 
-  showProductModal = () => {
+  showProductModal() {
     this.setState({ productModalShow: true });
-  };
+  }
 
-  hideProductModal = () => {
+  hideProductModal() {
     this.setState({ productModalShow: false });
-  };
+  }
 
-  setProductAndShowProductModal = (product = {}) => {
+  setProductAndShowProductModal(product = {}) {
     if (product !== {}) {
       this.setState({ modalProduct: product }, () => this.showProductModal());
     }
-  };
+  }
 
   render() {
     const { productModalShow, modalProduct } = this.state;

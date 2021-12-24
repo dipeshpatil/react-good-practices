@@ -1,3 +1,4 @@
+import React from "react";
 import clsx from "clsx";
 import PropTypes from "prop-types";
 
@@ -51,6 +52,7 @@ SimpleListGroupWithIconButton.propTypes = {
   bootstrapIconClasses: PropTypes.array,
   iconButtonOrientation: PropTypes.string,
   iconButtonAdditionalClasses: PropTypes.array,
+  variant: PropTypes.string,
 };
 
 export default SimpleListGroupWithIconButton;

@@ -1,3 +1,5 @@
+$box_shadow: #eb3b5a;
+
 .scrollmenu {
   white-space: nowrap;
   overflow: auto;
@@ -15,6 +17,13 @@
   width: 80%;
   border-radius: 5px;
   cursor: pointer;
+
+  &:hover {
+    box-shadow: 2px 1px 50px -5px $box_shadow;
+    -webkit-box-shadow: 2px 1px 50px -5px $box_shadow;
+    -moz-box-shadow: 2px 1px 50px -5px $box_shadow;
+    transition: 300ms ease-in-out;
+  }
 }
 
 .featured-product-image {

@@ -1,20 +1,25 @@
-name: ESLint PR Review
+name: ESLint Check
 on:
   push:
     branches:
       - indev
 jobs:
-  eslint_check:
-    name: Prepare action
+  build:
     runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        node-version: [14.x]
     steps:
-      # Checkout action must run prior to eslint check
-    - name: Checkout 
-      uses: actions/checkout@v1
-    - name: Lint
-      uses: Krizzu/eslint-check-action@v1.1.0
-      with:
-        ghToken: ${{ secrets.PERSONAL_ACCESS_TOKEN }}
-        eslintFiles: "."
-        eslintConfig: ".eslintrc.js",
-        eslintExt: "js, jsx"
+      - uses: actions/checkout@v1
+      - name: Use Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v1
+        with:
+          node-version: ${{ matrix.node-version }}
+      - name: Install Packages
+        run: npm install
+      - name: Run ESLint Check
+        run: |
+          git config --global user.email ${{secrets.EMAIL}}
+          git config --global user.name ${{secrets.USERNAME}}
+          git remote set-url origin https://${{secrets.PERSONAL_ACCESS_TOKEN}}@github.com/${{secrets.USERNAME}}/react-good-practices.git
+          npm run prepare

@@ -64,7 +64,7 @@ class AboutPage extends PureComponent {
             <Col sm={4}>
               <div>
                 {address.split("_").map((line, idx) => (
-                  <div className={isDark && "text-light"} key={idx}>
+                  <div className={clsx([isDark && "text-light"])} key={idx}>
                     {line}
                   </div>
                 ))}

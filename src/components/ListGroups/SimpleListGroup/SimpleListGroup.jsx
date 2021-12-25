@@ -36,7 +36,7 @@ DispatchSubList.propTypes = {
 SimpleListGroup.propTypes = {
   listData: PropTypes.array,
   subList: PropTypes.bool,
-  variant: PropTypes.string
+  variant: PropTypes.string,
 };
 
 export default SimpleListGroup;

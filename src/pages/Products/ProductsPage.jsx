@@ -6,7 +6,8 @@ import { Row, Col } from "react-bootstrap";
 import BasePage from "../../components/BasePage/BasePage";
 import Header from "../../components/Header/Header";
 import ProductBox from "../../components/ProductBox/ProductBox";
-import ProductModal from "../../components/Modals/ProductModal/ProductModal";
+import VerticalModal from "../../components/Modals/VerticalModal/VerticalModal";
+import ProductModalContent from "../../components/ModalContents/ProductModalContent/ProductModalContent";
 
 import productsData from "../../data/products_page_data.json";
 
@@ -113,11 +114,18 @@ class ProductsPage extends PureComponent {
               </div>
             );
           })}
-        <ProductModal
-          product={modalProduct}
-          show={productModalShow}
-          handleClose={() => this.hideProductModal()}
-        />
+        {__products.length > 0 && (
+          <VerticalModal
+            verticalModalOptions={{
+              fullScreen: true,
+              customHeader: false,
+            }}
+            modalTitle={modalProduct.title}
+            modalBody={<ProductModalContent product={modalProduct} />}
+            modalShow={productModalShow}
+            handleClose={() => this.hideProductModal()}
+          />
+        )}
       </BasePage>
     );
   }
@@ -129,6 +137,6 @@ ProductsPage.propTypes = {
       cat: PropTypes.string,
     }),
   }).isRequired,
-}
+};
 
 export default ProductsPage;

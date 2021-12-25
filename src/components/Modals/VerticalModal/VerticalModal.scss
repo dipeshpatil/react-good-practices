@@ -1,0 +1,15 @@
+.modal__dark {
+  .modal {
+    &-content {
+      .modal-header {
+        .btn-close {
+          background-color: #f0f0f0 !important;
+        }
+      }
+      background: #161616 !important;
+    }
+    &-body {
+      color: #f0f0f0;
+    }
+  }
+}

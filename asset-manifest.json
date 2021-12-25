@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/react-good-practices/static/css/main.af58c76b.chunk.css",
-    "main.js": "/react-good-practices/static/js/main.0e5794ed.chunk.js",
-    "main.js.map": "/react-good-practices/static/js/main.0e5794ed.chunk.js.map",
+    "main.js": "/react-good-practices/static/js/main.6facac40.chunk.js",
+    "main.js.map": "/react-good-practices/static/js/main.6facac40.chunk.js.map",
     "runtime-main.js": "/react-good-practices/static/js/runtime-main.7fba1af5.js",
     "runtime-main.js.map": "/react-good-practices/static/js/runtime-main.7fba1af5.js.map",
     "static/js/2.637d6ca2.chunk.js": "/react-good-practices/static/js/2.637d6ca2.chunk.js",
     "static/js/2.637d6ca2.chunk.js.map": "/react-good-practices/static/js/2.637d6ca2.chunk.js.map",
     "index.html": "/react-good-practices/index.html",
-    "precache-manifest.6c1757b48d1f1e4b31cf2e8fd588e8a1.js": "/react-good-practices/precache-manifest.6c1757b48d1f1e4b31cf2e8fd588e8a1.js",
+    "precache-manifest.56583eebd224ed67cb3c40c5d4e7d58c.js": "/react-good-practices/precache-manifest.56583eebd224ed67cb3c40c5d4e7d58c.js",
     "service-worker.js": "/react-good-practices/service-worker.js",
     "static/css/main.af58c76b.chunk.css.map": "/react-good-practices/static/css/main.af58c76b.chunk.css.map",
     "static/js/2.637d6ca2.chunk.js.LICENSE.txt": "/react-good-practices/static/js/2.637d6ca2.chunk.js.LICENSE.txt"
@@ -17,6 +17,6 @@
     "static/js/runtime-main.7fba1af5.js",
     "static/js/2.637d6ca2.chunk.js",
     "static/css/main.af58c76b.chunk.css",
-    "static/js/main.0e5794ed.chunk.js"
+    "static/js/main.6facac40.chunk.js"
   ]
 }

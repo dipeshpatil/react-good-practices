@@ -30,6 +30,11 @@ $box_shadow: #eb3b5a;
   width: 90%;
   border-radius: 6px;
   text-align: center;
+  transition: 300ms ease-in-out;
+
+  &:hover {
+    filter: sepia(0.5);
+  }
 }
 
 .featured-product-info {

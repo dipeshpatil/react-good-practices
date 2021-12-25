@@ -69,7 +69,7 @@ const Footer = () => {
           <span
             className={`copyright__info ${isDark ? "text-light" : "text-dark"}`}
           >
-            Copyright {new Date().getFullYear()} Imprimex. All Rights Reserved.
+            {`Copyright ${new Date().getFullYear()} Imprimex. All Rights Reserved.`}
           </span>
         </div>
       </Container>

@@ -1,0 +1,21 @@
+.product-tags {
+  .product-tag {
+    margin-right: 4px;
+    padding: 7px;
+    border-radius: 3px;
+    font-size: 12px !important;
+    background: #5f27cd;
+    color: #fff;
+  }
+}
+
+.featured {
+  margin-top: 15px;
+  &-tag {
+    display: inline;
+    padding: 7px;
+    border-radius: 5px;
+    background: #1abc9c;
+    color: #fff;
+  }
+}

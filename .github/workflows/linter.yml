@@ -15,4 +15,6 @@ jobs:
       uses: Krizzu/eslint-check-action@v1.1.0
       with:
         ghToken: ${{ secrets.PERSONAL_ACCESS_TOKEN }}
-
+        eslintFiles: "."
+        eslintConfig: ".eslintrc.js",
+        eslintExt: "js, jsx"

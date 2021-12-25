@@ -14,7 +14,7 @@ import config from "../../config/config";
 
 import "./AboutPage.scss";
 
-const { appName, isDark, isDevice } = config;
+const { appName, isDark } = config;
 
 const aboutPageOptions = {
   fluidContainer: false,

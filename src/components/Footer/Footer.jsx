@@ -11,7 +11,7 @@ import config from "../../config/config";
 
 import "./Footer.scss";
 
-const { isDark } = config;
+const { appName, isDark } = config;
 
 const footerLinksSequence = [
   "products",
@@ -67,9 +67,14 @@ const Footer = () => {
         <div className="copyright">
           <span className="logo-text">IMPRIMEX</span>
           <span
-            className={`copyright__info ${isDark ? "text-light" : "text-dark"}`}
+            className={clsx([
+              "readex-pro",
+              "readex-pro__light",
+              "copyright__info",
+              isDark ? "text-light" : "text-dark",
+            ])}
           >
-            {`Copyright ${new Date().getFullYear()} Imprimex. All Rights Reserved.`}
+            {`Copyright ${new Date().getFullYear()} ${appName}. All Rights Reserved.`}
           </span>
         </div>
       </Container>

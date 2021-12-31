@@ -57,7 +57,7 @@ const NavBar = ({ links = [], navBarOptions = DEFAULT }) => {
               <i
                 className={clsx([
                   "bi",
-                  isDark ? iconClass.darkMode : iconClass.lightMode,
+                  !isDark ? iconClass.darkMode : iconClass.lightMode,
                 ])}
               />
             </span>

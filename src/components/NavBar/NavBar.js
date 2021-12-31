@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 import clsx from "clsx";
 import { NavLink } from "react-router-dom";
 
-import { Navbar, Container, Nav, Image } from "react-bootstrap";
+import { Navbar, Container, Nav } from "react-bootstrap";
 
 import config from "../../config/config";
 

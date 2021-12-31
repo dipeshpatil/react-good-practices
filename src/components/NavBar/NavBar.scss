@@ -21,3 +21,17 @@ $colorLight: #f0f0f0;
     color: darken($colorLight, 30%);
   }
 }
+
+.navbar-brand {
+  cursor: pointer;
+}
+
+.light-mode {
+  margin-left: 8px;
+  color: #f1c40f;
+}
+
+.dark-mode {
+  margin-left: 8px;
+  color: #bdc3c7;
+}

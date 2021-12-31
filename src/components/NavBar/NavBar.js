@@ -1,10 +1,15 @@
 import React from "react";
 import PropTypes from "prop-types";
+import clsx from "clsx";
 import { NavLink } from "react-router-dom";
 
 import { Navbar, Container, Nav } from "react-bootstrap";
 
+import config from "../../config/config";
+
 import "./NavBar.scss";
+
+const { isDark } = config;
 
 const DEFAULT = {
   variant: "light",
@@ -16,8 +21,13 @@ const DEFAULT = {
 const ALLOWED_NAVBAR_DIRECTIONS = ["start", "left", "end", "right"];
 
 const toggleDarkMode = () => {
-  const isDark = JSON.parse(localStorage.isDark ?? null) || false;
   localStorage.isDark = !isDark;
+  window.location.reload();
+};
+
+const iconClass = {
+  darkMode: ["bi-moon-stars-fill", "dark-mode"],
+  lightMode: ["bi-lightbulb-fill", "light-mode"],
 };
 
 const NavBar = ({ links = [], navBarOptions = DEFAULT }) => {
@@ -35,12 +45,23 @@ const NavBar = ({ links = [], navBarOptions = DEFAULT }) => {
       expand="lg"
     >
       <Container fluid>
-        <Navbar.Brand
-          href="#"
-          onClick={() => toggleDarkMode()}
-          className="logo-text"
-        >
-          {title ?? DEFAULT.title}
+        <Navbar.Brand className="logo-text">
+          <div className="navbar-brand__info">
+            <span className="navbar-brand__info-title">
+              {title ?? DEFAULT.title}
+            </span>
+            <span
+              onClick={() => toggleDarkMode()}
+              className="navbar-brand__info-toggle"
+            >
+              <i
+                className={clsx([
+                  "bi",
+                  isDark ? iconClass.darkMode : iconClass.lightMode,
+                ])}
+              />
+            </span>
+          </div>
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">

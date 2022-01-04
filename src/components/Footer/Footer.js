@@ -20,6 +20,16 @@ const footerLinksSequence = [
   "social_links",
 ];
 
+const iconClass = {
+  darkMode: ["bi-moon-stars-fill", "dark-mode"],
+  lightMode: ["bi-lightbulb-fill", "light-mode"],
+};
+
+const toggleDarkMode = () => {
+  localStorage.isDark = !isDark;
+  window.location.reload();
+};
+
 const Footer = () => {
   return (
     <div className={clsx(["footer", isDark && "footer__dark"])}>
@@ -63,6 +73,23 @@ const Footer = () => {
               )
             );
           })}
+        </div>
+        <div className="theme-toggle" onClick={() => toggleDarkMode()}>
+          <span
+            className={clsx([
+              isDark && "text-light",
+              "readex-pro",
+              "readex-pro__semi-bold",
+            ])}
+          >
+            {`Theme: ${isDark ? "Dark" : "Light"}`}
+            <i
+              className={clsx([
+                "bi",
+                isDark ? iconClass.darkMode : iconClass.lightMode,
+              ])}
+            />
+          </span>
         </div>
         <div className="copyright">
           <span className="logo-text">IMPRIMEX</span>

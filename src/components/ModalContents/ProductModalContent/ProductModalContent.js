@@ -12,13 +12,16 @@ const { isDevice } = config;
 
 const ProductModalContent = ({ product = {} }) => {
   const { description, image, tags, featured } = product;
+  const productImage = isDark
+    ? product.image.dark ?? product.image
+    : product.image.light ?? product.image;
 
   return (
     <Container className={clsx(["p-2"])} fluid>
       <Row>
         <Col sm={4} md={4} lg={4}>
           <center>
-            <Image className="featured-product-image" src={image} />
+            <Image className="featured-product-image" src={productImage} />
           </center>
         </Col>
         <Col

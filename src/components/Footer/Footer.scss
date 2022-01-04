@@ -49,4 +49,16 @@
       font-size: 13px;
     }
   }
+
+  .theme-toggle {
+    margin-top: 15px;
+    margin-left: 10px;
+    font-size: 14px;
+
+    &:hover {
+      cursor: pointer;
+      color: #eb3b5a;
+      text-decoration: underline;
+    }
+  }
 }

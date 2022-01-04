@@ -17,6 +17,9 @@ const ProductBox = ({
 }) => {
   const isFeatured = product.featured;
   const isFeaturedAndTintNotDisabled = isFeatured && !disableFeatureTint;
+  const productImage = isDark
+    ? product.image.dark ?? product.image
+    : product.image.light ?? product.image;
 
   return (
     <div className="product" onClick={() => handleClick(product)}>
@@ -32,7 +35,7 @@ const ProductBox = ({
             ? "product__image__featured-shadowtint"
             : "product__image__normal-shadowtint",
         ])}
-        src={product.image}
+        src={productImage}
       />
       <div
         className={clsx([

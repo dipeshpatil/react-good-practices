@@ -9,7 +9,10 @@
           "featured": true,
           "show": true,
           "tags": ["copy", "fax", "print", "scan"],
-          "image": "http://imprimo.co.in/products/MP_305P_SP.jpg",
+          "image": {
+            "light": "https://i.ibb.co/z5DS0Bh/1-Light.png",
+            "dark": "https://i.ibb.co/MRzWFzB/1-Dark.png"
+          },
           "subCategory": "BW_MFP"
         },
         {
@@ -18,7 +21,10 @@
           "featured": false,
           "show": true,
           "tags": ["copy", "print", "scan"],
-          "image": "http://imprimo.co.in/products/MP_2014_AD.jpg",
+          "image": {
+            "light": "https://i.ibb.co/H2HXpSN/2-LIght.png",
+            "dark": "https://i.ibb.co/mRzspSF/2-Dark.png"
+          },
           "subCategory": "BW_MFP"
         },
         {
@@ -27,7 +33,10 @@
           "featured": true,
           "show": true,
           "tags": ["copy", "print", "scan"],
-          "image": "http://imprimo.co.in/products/MP_2014_D.jpg",
+          "image": {
+            "light": "https://i.ibb.co/M5wGmj6/3-Light.png",
+            "dark": "https://i.ibb.co/jrKY6Yq/3-Dark.png"
+          },
           "subCategory": "BW_MFP"
         },
         {
@@ -36,7 +45,10 @@
           "featured": false,
           "show": true,
           "tags": ["copy", "fax", "print", "scan"],
-          "image": "http://imprimo.co.in/products/MP_2501_SP.jpg",
+          "image": {
+            "light": "https://i.ibb.co/cDxm2KL/4-Light.png",
+            "dark": "https://i.ibb.co/sRMtTPF/4-Dark.png"
+          },
           "subCategory": "BW_MFP"
         },
         {
@@ -45,7 +57,10 @@
           "featured": false,
           "show": true,
           "tags": ["copy", "fax", "print", "scan"],
-          "image": "http://imprimo.co.in/products/MP_2555_SP.jpg",
+          "image": {
+            "light": "https://i.ibb.co/YNFkF1h/5-Light.png",
+            "dark": "https://i.ibb.co/27gdXZc/5-Dark.png"
+          },
           "subCategory": "BW_MFP"
         },
         {
@@ -54,7 +69,10 @@
           "featured": true,
           "show": true,
           "tags": ["copy", "fax", "print", "scan"],
-          "image": "http://imprimo.co.in/products/MP_3055_SP.png",
+          "image": {
+            "light": "https://i.ibb.co/H2HXpSN/2-LIght.png",
+            "dark": "https://i.ibb.co/mRzspSF/2-Dark.png"
+          },
           "subCategory": "BW_MFP"
         },
         {
@@ -63,7 +81,10 @@
           "featured": false,
           "show": true,
           "tags": ["copy", "fax", "print", "scan"],
-          "image": "http://imprimo.co.in/products/MP_3555_SP.jpg",
+          "image": {
+            "light": "https://i.ibb.co/M5wGmj6/3-Light.png",
+            "dark": "https://i.ibb.co/jrKY6Yq/3-Dark.png"
+          },
           "subCategory": "BW_MFP"
         },
         {
@@ -72,7 +93,10 @@
           "featured": false,
           "show": true,
           "tags": ["copy", "print", "scan"],
-          "image": "http://imprimo.co.in/products/MP_C2011.jpg",
+          "image": {
+            "light": "https://i.ibb.co/z5DS0Bh/1-Light.png",
+            "dark": "https://i.ibb.co/MRzWFzB/1-Dark.png"
+          },
           "subCategory": "COLOR_MFP"
         },
         {
@@ -81,7 +105,10 @@
           "featured": false,
           "show": true,
           "tags": ["copy", "fax", "print", "scan"],
-          "image": "http://imprimo.co.in/products/MP_C2004exSP.jpg",
+          "image": {
+            "light": "https://i.ibb.co/H2HXpSN/2-LIght.png",
+            "dark": "https://i.ibb.co/mRzspSF/2-Dark.png"
+          },
           "subCategory": "COLOR_MFP"
         },
         {
@@ -90,7 +117,10 @@
           "featured": false,
           "show": true,
           "tags": ["copy", "fax", "print", "scan"],
-          "image": "http://imprimo.co.in/products/MP_C2504exSP.jpg",
+          "image": {
+            "light": "https://i.ibb.co/YNFkF1h/5-Light.png",
+            "dark": "https://i.ibb.co/27gdXZc/5-Dark.png"
+          },
           "subCategory": "COLOR_MFP"
         },
         {
@@ -99,7 +129,10 @@
           "featured": true,
           "show": true,
           "tags": ["copy", "fax", "print", "scan"],
-          "image": "http://imprimo.co.in/products/MP_C3004exSP.jpg",
+          "image": {
+            "light": "https://i.ibb.co/cDxm2KL/4-Light.png",
+            "dark": "https://i.ibb.co/sRMtTPF/4-Dark.png"
+          },
           "subCategory": "COLOR_MFP"
         }
       ]
@@ -113,7 +146,10 @@
           "featured": false,
           "show": true,
           "tags": ["copy", "print"],
-          "image": "http://imprimo.co.in/products/DX_2430.jpg",
+          "image": {
+            "light": "https://i.ibb.co/z5DS0Bh/1-Light.png",
+            "dark": "https://i.ibb.co/MRzWFzB/1-Dark.png"
+          },
           "subCategory": "DD"
         },
         {
@@ -122,7 +158,10 @@
           "featured": false,
           "show": true,
           "tags": ["copy", "print"],
-          "image": "http://imprimo.co.in/products/DD_3344.jpg",
+          "image": {
+            "light": "https://i.ibb.co/H2HXpSN/2-LIght.png",
+            "dark": "https://i.ibb.co/mRzspSF/2-Dark.png"
+          },
           "subCategory": "DD"
         },
         {
@@ -131,7 +170,10 @@
           "featured": true,
           "show": true,
           "tags": ["copy", "print"],
-          "image": "http://imprimo.co.in/products/DD_5450.jpg",
+          "image": {
+            "light": "https://i.ibb.co/cDxm2KL/4-Light.png",
+            "dark": "https://i.ibb.co/sRMtTPF/4-Dark.png"
+          },
           "subCategory": "DD"
         }
       ]
@@ -145,7 +187,10 @@
           "featured": false,
           "show": true,
           "tags": ["print"],
-          "image": "http://imprimo.co.in/products/SP_C440_DN.jpg",
+          "image": {
+            "light": "https://i.ibb.co/DG2YyGm/6-Light.png",
+            "dark": "https://i.ibb.co/NmXydhY/6-Dark.png"
+          },
           "subCategory": "CL"
         },
         {
@@ -154,7 +199,10 @@
           "featured": true,
           "show": true,
           "tags": ["print"],
-          "image": "http://imprimo.co.in/products/SP_C252_DN.jpg",
+          "image": {
+            "light": "https://i.ibb.co/hfFwLZL/7-Light.png",
+            "dark": "https://i.ibb.co/ThFbdjv/7-Dark.png"
+          },
           "subCategory": "CL"
         },
         {
@@ -163,7 +211,10 @@
           "featured": false,
           "show": true,
           "tags": ["print"],
-          "image": "http://imprimo.co.in/products/SP_C250_DN.jpg",
+          "image": {
+            "light": "https://i.ibb.co/VpJj9XY/8-Light.png",
+            "dark": "https://i.ibb.co/mN35fJr/8-Dark.png"
+          },
           "subCategory": "CL"
         },
         {
@@ -172,7 +223,10 @@
           "featured": true,
           "show": true,
           "tags": ["print"],
-          "image": "http://imprimo.co.in/products/SP_212_NW.jpg",
+          "image": {
+            "light": "https://i.ibb.co/DG2YyGm/6-Light.png",
+            "dark": "https://i.ibb.co/NmXydhY/6-Dark.png"
+          },
           "subCategory": "BWL"
         },
         {
@@ -181,7 +235,10 @@
           "featured": false,
           "show": true,
           "tags": ["print"],
-          "image": "http://imprimo.co.in/products/SP_210.jpg",
+          "image": {
+            "light": "https://i.ibb.co/hfFwLZL/7-Light.png",
+            "dark": "https://i.ibb.co/ThFbdjv/7-Dark.png"
+          },
           "subCategory": "BWL"
         },
         {
@@ -190,7 +247,10 @@
           "featured": true,
           "show": true,
           "tags": ["copy", "fax", "print", "scan"],
-          "image": "http://imprimo.co.in/products/SP_3510_SF.jpg",
+          "image": {
+            "light": "https://i.ibb.co/VpJj9XY/8-Light.png",
+            "dark": "https://i.ibb.co/mN35fJr/8-Dark.png"
+          },
           "subCategory": "AIO"
         },
         {
@@ -199,7 +259,10 @@
           "featured": false,
           "show": true,
           "tags": ["copy", "fax", "print", "scan"],
-          "image": "http://imprimo.co.in/products/SP_310_SFN.jpg",
+          "image": {
+            "light": "https://i.ibb.co/hfFwLZL/7-Light.png",
+            "dark": "https://i.ibb.co/ThFbdjv/7-Dark.png"
+          },
           "subCategory": "AIO"
         }
       ]
@@ -213,7 +276,10 @@
           "featured": false,
           "show": true,
           "tags": [],
-          "image": "http://imprimo.co.in/products/PJS_2440.jpg",
+          "image": {
+            "light": "https://i.ibb.co/TK36RLY/1-Light.png",
+            "dark": "https://i.ibb.co/Bn4tr4S/1-Dark.png"
+          },
           "subCategory": "PJ"
         },
         {
@@ -222,7 +288,10 @@
           "featured": false,
           "show": true,
           "tags": [],
-          "image": "http://imprimo.co.in/products/PJWXC_1110.jpg",
+          "image": {
+            "light": "https://i.ibb.co/fSDDp47/2-Light.png",
+            "dark": "https://i.ibb.co/kmtcBDk/2-Dark.png"
+          },
           "subCategory": "PJ"
         },
         {
@@ -231,7 +300,10 @@
           "featured": false,
           "show": true,
           "tags": [],
-          "image": "http://imprimo.co.in/products/PJX_4340.jpg",
+          "image": {
+            "light": "https://i.ibb.co/FHXrCHT/3-Light.png",
+            "dark": "https://i.ibb.co/Xxcffjq/3-Dark.png"
+          },
           "subCategory": "PJ"
         },
         {
@@ -240,7 +312,10 @@
           "featured": false,
           "show": true,
           "tags": [],
-          "image": "http://imprimo.co.in/products/PJWX_4152_NI.jpg",
+          "image": {
+            "light": "https://i.ibb.co/zFWDTc8/4-Light.png",
+            "dark": "https://i.ibb.co/jJR4ryw/4-Dark.png"
+          },
           "subCategory": "PJ"
         },
         {
@@ -249,7 +324,10 @@
           "featured": false,
           "show": true,
           "tags": [],
-          "image": "http://imprimo.co.in/products/PJWX_361_N.jpg",
+          "image": {
+            "light": "https://i.ibb.co/18FLw92/5-Light.png",
+            "dark": "https://i.ibb.co/x74pmQY/5-Dark.png"
+          },
           "subCategory": "PJ"
         },
         {
@@ -258,7 +336,10 @@
           "featured": false,
           "show": true,
           "tags": [],
-          "image": "http://imprimo.co.in/products/PJKU_12000.jpg",
+          "image": {
+            "light": "https://i.ibb.co/XjwhMVb/6-Light.png",
+            "dark": "https://i.ibb.co/V9nd76C/6-Dark.png"
+          },
           "subCategory": "PJ"
         },
         {
@@ -267,7 +348,10 @@
           "featured": true,
           "show": true,
           "tags": [],
-          "image": "http://imprimo.co.in/products/PJWU_6181N.jpg",
+          "image": {
+            "light": "https://i.ibb.co/7kRB6S5/7-Light.png",
+            "dark": "https://i.ibb.co/SdhJD17/7-Dark.png"
+          },
           "subCategory": "PJ"
         },
         {
@@ -276,7 +360,10 @@
           "featured": true,
           "show": true,
           "tags": [],
-          "image": "http://imprimo.co.in/products/D5500.jpg",
+          "image": {
+            "light": "https://i.ibb.co/2cH1Lv5/10-Light.png",
+            "dark": "https://i.ibb.co/q0dsckb/10-Dark.png"
+          },
           "subCategory": "WB"
         },
         {
@@ -285,7 +372,10 @@
           "featured": false,
           "show": true,
           "tags": [],
-          "image": "http://imprimo.co.in/products/D6510.jpg",
+          "image": {
+            "light": "https://i.ibb.co/3znqm9t/9-Light.png",
+            "dark": "https://i.ibb.co/BjfbPf1/9-Dark.png"
+          },
           "subCategory": "WB"
         },
         {
@@ -294,7 +384,10 @@
           "featured": false,
           "show": true,
           "tags": [],
-          "image": "http://imprimo.co.in/products/D8400.jpg",
+          "image": {
+            "light": "https://i.ibb.co/fHzfX6y/11-Light.png",
+            "dark": "https://i.ibb.co/J38LhDk/11-Dark.png"
+          },
           "subCategory": "WB"
         }
       ]

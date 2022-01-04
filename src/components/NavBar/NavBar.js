@@ -20,16 +20,6 @@ const DEFAULT = {
 
 const ALLOWED_NAVBAR_DIRECTIONS = ["start", "left", "end", "right"];
 
-const toggleDarkMode = () => {
-  localStorage.isDark = !isDark;
-  window.location.reload();
-};
-
-const iconClass = {
-  darkMode: ["bi-moon-stars-fill", "dark-mode"],
-  lightMode: ["bi-lightbulb-fill", "light-mode"],
-};
-
 const NavBar = ({ links = [], navBarOptions = DEFAULT }) => {
   const { variant, title, background, orientation } = navBarOptions;
   const navbarOrientation = ALLOWED_NAVBAR_DIRECTIONS.slice(0, 2).includes(
@@ -49,17 +39,6 @@ const NavBar = ({ links = [], navBarOptions = DEFAULT }) => {
           <div className="navbar-brand__info">
             <span className="navbar-brand__info-title">
               {title ?? DEFAULT.title}
-            </span>
-            <span
-              onClick={() => toggleDarkMode()}
-              className="navbar-brand__info-toggle"
-            >
-              <i
-                className={clsx([
-                  "bi",
-                  !isDark ? iconClass.darkMode : iconClass.lightMode,
-                ])}
-              />
             </span>
           </div>
         </Navbar.Brand>

@@ -1,4 +1,5 @@
 import React, { PureComponent } from "react";
+import clsx from "clsx";
 
 import { Row, Col, Form, Button } from "react-bootstrap";
 
@@ -13,7 +14,7 @@ import config from "../../config/config";
 
 import "./ContactPage.scss";
 
-const { isDark, contactPageData } = config;
+const { isDark, contactPageData, isDevice } = config;
 
 const contactPageOptions = {
   fluidContainer: false,
@@ -38,7 +39,7 @@ class ContactPage extends PureComponent {
               text="Let's Connect!"
               size={1}
               additionalClasses={[
-                "text-center",
+                isDevice ? "text-start" : "text-center",
                 "readex-pro",
                 "readex-pro__semi-bold",
                 "text-danger",
@@ -49,7 +50,7 @@ class ContactPage extends PureComponent {
               size={3}
               additionalClasses={[
                 "mt-4",
-                "text-center",
+                isDevice ? "text-start" : "text-center",
                 "readex-pro",
                 "readex-pro__extra-light",
                 isDark && "text-light",
@@ -59,7 +60,7 @@ class ContactPage extends PureComponent {
               text={contactPageData.email}
               size={3}
               additionalClasses={[
-                "text-center",
+                isDevice ? "text-start" : "text-center",
                 "comfortaa",
                 "comfortaa__semi-bold",
                 "text-danger",
@@ -71,7 +72,7 @@ class ContactPage extends PureComponent {
               size={3}
               additionalClasses={[
                 "mt-4",
-                "text-center",
+                isDevice ? "text-start" : "text-center",
                 "readex-pro",
                 "readex-pro__extra-light",
                 isDark && "text-light",
@@ -81,7 +82,7 @@ class ContactPage extends PureComponent {
               text={contactPageData.phone}
               size={3}
               additionalClasses={[
-                "text-center",
+                isDevice ? "text-start" : "text-center",
                 "comfortaa",
                 "comfortaa__semi-bold",
                 "text-danger",
@@ -93,13 +94,13 @@ class ContactPage extends PureComponent {
               size={3}
               additionalClasses={[
                 "mt-4",
-                "text-center",
+                isDevice ? "text-start" : "text-center",
                 "readex-pro",
                 "readex-pro__extra-light",
                 isDark && "text-light",
               ]}
             />
-            <div className="align-center">
+            <div className={clsx([!isDevice && "align-center"])}>
               <FooterLinksListGroup
                 listType="unordered"
                 listData={footerData["social_links"].links
@@ -117,7 +118,7 @@ class ContactPage extends PureComponent {
               text="Contact Us"
               size={1}
               additionalClasses={[
-                "text-center",
+                isDevice ? "text-start" : "text-center",
                 "readex-pro",
                 "readex-pro__medium",
                 isDark && "text-light",

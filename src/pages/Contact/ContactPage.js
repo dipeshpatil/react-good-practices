@@ -7,6 +7,8 @@ import BasePage from "../../components/BasePage/BasePage";
 import Header from "../../components/Header/Header";
 import FooterLinksListGroup from "../../components/ListGroups/FooterLinksListGroup/FooterLinksListGroup";
 import TextFieldInput from "../../components/InputGroups/TextFieldInput/TextFieldInput";
+import DropdownInput from "../../components/InputGroups/DropdownInput/DropdownInput";
+import TextWithSideLabel from "../../components/InputGroups/TextWithSideLabel/TextWithSideLabel";
 
 import footerData from "../../data/footer_data.json";
 
@@ -14,11 +16,12 @@ import config from "../../config/config";
 
 import "./ContactPage.scss";
 
-const { isDark, contactPageData, isDevice } = config;
+const { isDark, contactPageData } = config;
 
 const contactPageOptions = {
   fluidContainer: false,
   useContainer: true,
+  additionalClasses: ["p-4"],
 };
 
 class ContactPage extends PureComponent {
@@ -33,13 +36,13 @@ class ContactPage extends PureComponent {
 
     return (
       <BasePage pageOptions={contactPageOptions}>
-        <Row className="p-3">
+        <Row>
           <Col sm={5}>
             <Header
               text="Let's Connect!"
               size={1}
               additionalClasses={[
-                isDevice ? "text-start" : "text-center",
+                "text-start",
                 "readex-pro",
                 "readex-pro__semi-bold",
                 "text-danger",
@@ -50,7 +53,7 @@ class ContactPage extends PureComponent {
               size={3}
               additionalClasses={[
                 "mt-4",
-                isDevice ? "text-start" : "text-center",
+                "text-start",
                 "readex-pro",
                 "readex-pro__extra-light",
                 isDark && "text-light",
@@ -60,7 +63,7 @@ class ContactPage extends PureComponent {
               text={contactPageData.email}
               size={3}
               additionalClasses={[
-                isDevice ? "text-start" : "text-center",
+                "text-start",
                 "comfortaa",
                 "comfortaa__semi-bold",
                 "text-danger",
@@ -72,7 +75,7 @@ class ContactPage extends PureComponent {
               size={3}
               additionalClasses={[
                 "mt-4",
-                isDevice ? "text-start" : "text-center",
+                "text-start",
                 "readex-pro",
                 "readex-pro__extra-light",
                 isDark && "text-light",
@@ -82,7 +85,7 @@ class ContactPage extends PureComponent {
               text={contactPageData.phone}
               size={3}
               additionalClasses={[
-                isDevice ? "text-start" : "text-center",
+                "text-start",
                 "comfortaa",
                 "comfortaa__semi-bold",
                 "text-danger",
@@ -94,45 +97,79 @@ class ContactPage extends PureComponent {
               size={3}
               additionalClasses={[
                 "mt-4",
-                isDevice ? "text-start" : "text-center",
+                "text-start",
                 "readex-pro",
                 "readex-pro__extra-light",
                 isDark && "text-light",
               ]}
             />
-            <div className={clsx([!isDevice && "align-center"])}>
-              <FooterLinksListGroup
-                listType="unordered"
-                listData={footerData["social_links"].links
-                  .filter((socialLink) =>
-                    socialLinksArray.includes(socialLink.title)
-                  )
-                  .sort((socialLink1, socialLink2) =>
-                    socialLink1.title.localeCompare(socialLink2.title)
-                  )}
-              />
-            </div>
+            <FooterLinksListGroup
+              listType="unordered"
+              listData={footerData["social_links"].links
+                .filter((socialLink) =>
+                  socialLinksArray.includes(socialLink.title)
+                )
+                .sort((socialLink1, socialLink2) =>
+                  socialLink1.title.localeCompare(socialLink2.title)
+                )}
+            />
           </Col>
           <Col sm={7}>
             <Header
               text="Contact Us"
               size={1}
               additionalClasses={[
-                isDevice ? "text-start" : "text-center",
+                "text-start",
                 "readex-pro",
                 "readex-pro__medium",
                 isDark && "text-light",
               ]}
             />
             <Form>
-              <TextFieldInput
-                labelText="Name"
-                textPlaceholder="Full Name"
-                textRef={() => null}
-              />
-              <TextFieldInput labelText="Company Name" textRef={() => null} />
-              <TextFieldInput labelText="Email Address" textRef={() => null} />
-              <TextFieldInput labelText="Contact Number" textRef={() => null} />
+              <Row>
+                <Col sm={6}>
+                  <TextFieldInput
+                    labelText="Name"
+                    textPlaceholder="Full Name"
+                    textRef={() => null}
+                  />
+                </Col>
+                <Col sm={6}>
+                  <TextFieldInput
+                    labelText="Company Name"
+                    textRef={() => null}
+                  />
+                </Col>
+              </Row>
+              <Row>
+                <Col sm={6}>
+                  <TextFieldInput
+                    labelText="Company Email Address"
+                    textRef={() => null}
+                  />
+                </Col>
+                <Col sm={6}>
+                  <TextFieldInput
+                    labelText="Contact Number"
+                    textPlaceholder="Country Code + Contact Number"
+                    textRef={() => null}
+                  />
+                </Col>
+              </Row>
+              <Row>
+                <Col sm={6}>
+                  <DropdownInput
+                    labelText="Customer Type"
+                    dropDownValues={["New Customer", "Existing Customer"]}
+                  />
+                </Col>
+                <Col sm={6}>
+                  <DropdownInput
+                    labelText="Purchase Scheme After Service ?"
+                    dropDownValues={["Yes", "No", "Maybe"]}
+                  />
+                </Col>
+              </Row>
               <TextFieldInput
                 labelText="Comments"
                 inputAs="textarea"

@@ -44,8 +44,8 @@ const Footer = () => {
                   additionalClasses={[
                     "footer__menu-title",
                     "text-start",
-                    "readex-pro",
-                    "readex-pro__medium",
+                    "comfortaa",
+                    "comfortaa__bold",
                     "text-danger",
                   ]}
                 />

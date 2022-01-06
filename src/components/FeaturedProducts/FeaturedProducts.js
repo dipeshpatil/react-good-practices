@@ -78,6 +78,7 @@ const FeaturedProducts = () => {
         <Col
           className={clsx([
             "readex-pro",
+            "readex-pro__regular",
             "featured-product-info",
             "px-4",
             isDark && "text-light",

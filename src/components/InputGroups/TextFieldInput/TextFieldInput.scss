@@ -1,0 +1,12 @@
+$brandColor: #dc3545;
+$darkBackgroundColor: #212121;
+
+.form-control {
+  border-color: $brandColor !important;
+  border: 2px solid $brandColor !important;
+  border-radius: 7px !important;
+
+  &__dark {
+    background-color: $darkBackgroundColor !important;
+  }
+}

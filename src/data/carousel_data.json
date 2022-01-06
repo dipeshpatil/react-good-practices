@@ -4,20 +4,23 @@
     "text": "",
     "subText": "Nulla vitae elit libero, a pharetra augue mollis interdum.",
     "url": "https://imprimo.co.in/admin/images/desktop/Rise%20of%20innovation.png",
-    "alt": "First Image"
+    "alt": "First Image",
+    "show": true
   },
   {
     "id": 2,
     "text": "",
     "subText": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
     "url": "https://imprimo.co.in/admin/images/desktop/Drumroll.png",
-    "alt": "Second Image"
+    "alt": "Second Image",
+    "show": false
   },
   {
     "id": 3,
     "text": "",
     "subText": "Praesent commodo cursus magna, vel scelerisque nisl consectetur.",
     "url": "https://www.oconnorstrata.com.au/wp-content/uploads/2016/10/WSG00064-1200x400.jpg",
-    "alt": "Third Image"
+    "alt": "Third Image",
+    "show": false
   }
 ]

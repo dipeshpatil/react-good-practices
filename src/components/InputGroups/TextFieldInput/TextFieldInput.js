@@ -6,7 +6,7 @@ import { Form } from "react-bootstrap";
 
 import config from "../../../config/config";
 
-import "./TextFieldInput.scss";
+import "../InputGroups.scss";
 
 const { isDark } = config;
 

@@ -45,6 +45,7 @@ const Dock = ({ data = [], options = DEFAULT_OPTIONS }) => {
                 className={clsx([
                   "vertical__dock-wrapper-title",
                   "readex-pro",
+                  "readex-pro__regular",
                   isDark && "vertical__dock-wrapper-title-dark",
                 ])}
               >

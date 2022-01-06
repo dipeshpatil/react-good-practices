@@ -49,14 +49,14 @@ class AboutPage extends PureComponent {
             {content}
           </div>
         </div>
-        <div className="px-3 mb-3">
+        <div className="px-3 mb-3 mt-3">
           <Header
             text="Office Address"
             size={3}
             additionalClasses={[
               "text-start",
-              "readex-pro",
-              "readex-pro__medium",
+              "comfortaa",
+              "comfortaa__medium",
               isDark && "text-light",
             ]}
           />

@@ -46,7 +46,7 @@ const TextWithSideLabel = ({
   return (
     <InputGroup size={size ?? "md"}>
       <DecideOrientationComponent
-        orientation={labelOrientation}
+        orientation={labelOrientation.toLowerCase()}
         placeholder={textPlaceHolder}
         labelText={labelText}
         textRef={textRef}

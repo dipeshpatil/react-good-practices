@@ -44,7 +44,9 @@ const NavBar = ({ links = [], navBarOptions = DEFAULT }) => {
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
-          <Nav className={`${navbarOrientation} readex-pro`}>
+          <Nav
+            className={`${navbarOrientation} readex-pro readex-pro__regular`}
+          >
             {links.map((link) => (
               <NavLink
                 className={`nav_link nav_link-${variant}`}

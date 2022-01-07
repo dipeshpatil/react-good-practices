@@ -17,6 +17,7 @@ const TextFieldInput = ({
   subText,
   textRef,
   inputAs,
+  handleOnChange,
 }) => {
   return (
     <Form.Group className="mb-3 readex-pro">
@@ -29,6 +30,7 @@ const TextFieldInput = ({
         ref={textRef}
         type={type ?? "text"}
         placeholder={textPlaceholder ?? `Enter ${labelText}`}
+        onChange={(e) => handleOnChange(e)}
       />
       {(subText ?? false) && (
         <Form.Text className="text-muted">{subText}</Form.Text>
@@ -44,6 +46,7 @@ TextFieldInput.propTypes = {
   subText: PropTypes.string,
   textRef: PropTypes.any,
   inputAs: PropTypes.string,
+  handleOnChange: PropTypes.func.isRequired,
 };
 
 export default TextFieldInput;

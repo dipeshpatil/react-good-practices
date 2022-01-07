@@ -7,7 +7,7 @@ import Header from "../../components/Header/Header";
 import FooterLinksListGroup from "../../components/ListGroups/FooterLinksListGroup/FooterLinksListGroup";
 import TextFieldInput from "../../components/InputGroups/TextFieldInput/TextFieldInput";
 import DropdownInput from "../../components/InputGroups/DropdownInput/DropdownInput";
-import TextWithSideLabel from "../../components/InputGroups/TextWithSideLabel/TextWithSideLabel";
+import GridLayout from "../../components/GridLayout/GridLayout";
 
 import footerData from "../../data/footer_data.json";
 
@@ -23,15 +23,63 @@ const contactPageOptions = {
   additionalClasses: ["p-4"],
 };
 
+const contactFormDefaults = {
+  companyType: [
+    "Small Business",
+    "Medium Sized Enterprise",
+    "Corporate",
+    "Education",
+    "Healthcare",
+    "Others",
+  ],
+  productType: [
+    "Multifunctionals",
+    "Duplicators",
+    "Laser Printers",
+    "Projectors/Whiteboards",
+    // "Allow Us To Help You Decide",
+  ],
+  productID: [],
+  customerType: ["New Customer", "Existing Customer"],
+  purchaseSchemeAfterService: ["Yes", "No", "Maybe"],
+};
+
 class ContactPage extends PureComponent {
   constructor(props) {
     super(props);
 
-    this.state = {};
+    this.state = {
+      contactForm: {
+        fullName: "",
+        contactNumber: "",
+        companyName: "",
+        companyEmailAddress: "",
+        companyType: contactFormDefaults.companyType[0],
+        productType: contactFormDefaults.productType[0],
+        productID: "",
+        customerType: contactFormDefaults.customerType[0],
+        purchaseSchemeAfterService:
+          contactFormDefaults.purchaseSchemeAfterService[0],
+        comments: "",
+      },
+    };
+  }
+
+  updateContactFormState(targetField, value) {
+    const { contactForm } = this.state;
+    contactForm[targetField] = value;
+    this.setState({ contactForm });
   }
 
   render() {
     const socialLinksArray = ["Facebook", "Twitter", "WhatsApp"];
+    const {
+      companyType,
+      productID,
+      productType,
+      customerType,
+      purchaseSchemeAfterService,
+    } = contactFormDefaults;
 
     return (
       <BasePage pageOptions={contactPageOptions}>
@@ -68,7 +116,6 @@ class ContactPage extends PureComponent {
                 "text-danger",
               ]}
             />
-
             <Header
               text="Let's Talk..."
               size={3}
@@ -90,7 +137,6 @@ class ContactPage extends PureComponent {
                 "text-danger",
               ]}
             />
-
             <Header
               text="Let's Chat..."
               size={3}
@@ -125,59 +171,117 @@ class ContactPage extends PureComponent {
               ]}
             />
             <Form>
-              <Row>
-                <Col sm={6}>
+              <GridLayout
+                columns={[{ sm: 6 }, { sm: 6 }]}
+                components={[
                   <TextFieldInput
-                    labelText="Name"
-                    textPlaceholder="Full Name"
+                    labelText="Full Name"
                     textRef={() => null}
-                  />
-                </Col>
-                <Col sm={6}>
-                  <TextFieldInput
-                    labelText="Company Name"
-                    textRef={() => null}
-                  />
-                </Col>
-              </Row>
-              <Row>
-                <Col sm={6}>
-                  <TextFieldInput
-                    labelText="Company Email Address"
-                    textRef={() => null}
-                  />
-                </Col>
-                <Col sm={6}>
+                    handleOnChange={(e) =>
+                      this.updateContactFormState("fullName", e.target.value)
+                    }
+                  />,
                   <TextFieldInput
                     labelText="Contact Number"
                     textPlaceholder="Country Code + Contact Number"
                     textRef={() => null}
-                  />
-                </Col>
-              </Row>
-              <Row>
-                <Col sm={6}>
+                    handleOnChange={(e) =>
+                      this.updateContactFormState(
+                        "contactNumber",
+                        e.target.value
+                      )
+                    }
+                  />,
+                ]}
+              />
+              <TextFieldInput
+                labelText="Company Name"
+                textRef={() => null}
+                handleOnChange={(e) =>
+                  this.updateContactFormState("companyName", e.target.value)
+                }
+              />
+              <GridLayout
+                columns={[{ sm: 6 }, { sm: 6 }]}
+                components={[
+                  <TextFieldInput
+                    labelText="Company Email Address"
+                    textRef={() => null}
+                    handleOnChange={(e) =>
+                      this.updateContactFormState(
+                        "companyEmailAddress",
+                        e.target.value
+                      )
+                    }
+                  />,
+                  <DropdownInput
+                    labelText="Company Type"
+                    dropDownValues={companyType}
+                    handleOnChange={(e) =>
+                      this.updateContactFormState("companyType", e.target.value)
+                    }
+                  />,
+                ]}
+              />
+              <GridLayout
+                columns={[{ sm: 6 }, { sm: 6 }]}
+                components={[
+                  <DropdownInput
+                    labelText="Product Type"
+                    dropDownValues={productType}
+                    handleOnChange={(e) => {
+                      this.updateContactFormState(
+                        "productType",
+                        e.target.value
+                      );
+                    }}
+                  />,
+                  <DropdownInput
+                    labelText="Product ID"
+                    dropDownValues={productID}
+                    handleOnChange={(e) =>
+                      this.updateContactFormState("productID", e.target.value)
+                    }
+                  />,
+                ]}
+              />
+              <GridLayout
+                columns={[{ sm: 6 }, { sm: 6 }]}
+                components={[
                   <DropdownInput
                     labelText="Customer Type"
-                    dropDownValues={["New Customer", "Existing Customer"]}
-                  />
-                </Col>
-                <Col sm={6}>
+                    dropDownValues={customerType}
+                    handleOnChange={(e) =>
+                      this.updateContactFormState(
+                        "customerType",
+                        e.target.value
+                      )
+                    }
+                  />,
                   <DropdownInput
                     labelText="Purchase Scheme After Service ?"
-                    dropDownValues={["Yes", "No", "Maybe"]}
-                  />
-                </Col>
-              </Row>
+                    dropDownValues={purchaseSchemeAfterService}
+                    handleOnChange={(e) =>
+                      this.updateContactFormState(
+                        "purchaseSchemeAfterService",
+                        e.target.value
+                      )
+                    }
+                  />,
+                ]}
+              />
               <TextFieldInput
                 labelText="Comments"
                 inputAs="textarea"
                 textRef={() => null}
+                handleOnChange={(e) =>
+                  this.updateContactFormState("comments", e.target.value)
+                }
               />
               <Button
                 className="readex-pro"
                 variant="danger"
-                onClick={() => alert("Request Submitted!")}
+                onClick={() => alert(JSON.stringify(this.state.contactForm))}
               >
                 Send Request
               </Button>

@@ -20,15 +20,15 @@ const DropdownInput = ({ labelText, dropDownValues = [], handleOnChange }) => {
         className={clsx([isDark && "form-control__dark"])}
         as="select"
         onChange={(e) => handleOnChange(e)}
-        defaultValue={dropDownValues[0]}
+        defaultValue="Select"
       >
         {dropDownValues.length > 0 && (
-          <option key={0} value={dropDownValues[0]}>
-            {dropDownValues[0]}
+          <option key={0} disabled>
+            Select
           </option>
         )}
         {dropDownValues.length > 0 &&
-          dropDownValues.splice(1).map((dropDownValue, idx) => {
+          dropDownValues.map((dropDownValue, idx) => {
             return (
               <option key={idx + 1} value={dropDownValue}>
                 {dropDownValue}

@@ -1,4 +1,4 @@
-import React, { PureComponent } from "react";
+import React, { Component } from "react";
 
 import { Row, Col, Form, Button } from "react-bootstrap";
 
@@ -10,6 +10,7 @@ import DropdownInput from "../../components/InputGroups/DropdownInput/DropdownIn
 import GridLayout from "../../components/GridLayout/GridLayout";
 
 import footerData from "../../data/footer_data.json";
+import productsData from "../../data/products_page_data.json";
 
 import config from "../../config/config";
 
@@ -22,6 +23,8 @@ const contactPageOptions = {
   useContainer: true,
   additionalClasses: ["p-4"],
 };
+
+const socialLinksArray = ["Facebook", "Twitter", "WhatsApp"];
 
 const contactFormDefaults = {
   companyType: [
@@ -37,14 +40,18 @@ const contactFormDefaults = {
     "Duplicators",
     "Laser Printers",
     "Projectors/Whiteboards",
-    // "Allow Us To Help You Decide",
+    "Allow Us To Help You Decide",
   ],
-  productID: [],
-  customerType: ["New Customer", "Existing Customer"],
-  purchaseSchemeAfterService: ["Yes", "No", "Maybe"],
 };
 
-class ContactPage extends PureComponent {
+const productCategoryMapping = {
+  Multifunctionals: "multifunctional_printers",
+  Duplicators: "digital_duplicators",
+  "Laser Printers": "consumer_printers",
+  "Projectors/Whiteboards": "visual_communications",
+  "Allow Us To Help You Decide": "none",
+};
+class ContactPage extends Component {
   constructor(props) {
     super(props);
 
@@ -54,14 +61,13 @@ class ContactPage extends PureComponent {
         contactNumber: "",
         companyName: "",
         companyEmailAddress: "",
-        companyType: contactFormDefaults.companyType[0],
-        productType: contactFormDefaults.productType[0],
+        companyType: "",
+        productType: "",
         productID: "",
-        customerType: contactFormDefaults.customerType[0],
-        purchaseSchemeAfterService:
-          contactFormDefaults.purchaseSchemeAfterService[0],
         comments: "",
       },
+      productIDDropDown: [],
+      hideProductIDDropdown: false,
     };
   }
 
@@ -71,15 +77,25 @@ class ContactPage extends PureComponent {
     this.setState({ contactForm });
   }
 
+  updateProductIDDropDownFromProductsData(productType) {
+    let hide;
+    if (productCategoryMapping[productType] === "none") {
+      hide = true;
+    } else {
+      hide = false;
+      const productCategory =
+        productsData.products[productCategoryMapping[productType]].items;
+      const productIds = [];
+      productCategory.map((product) => productIds.push(product.title));
+      this.setState({ productIDDropDown: productIds });
+    }
+    this.setState({ hideProductIDDropdown: hide });
+  }
+
   render() {
-    const socialLinksArray = ["Facebook", "Twitter", "WhatsApp"];
-    const {
-      companyType,
-      productID,
-      productType,
-      customerType,
-      purchaseSchemeAfterService,
-    } = contactFormDefaults;
+    const { productIDDropDown, hideProductIDDropdown, contactForm } =
+      this.state;
+    const { companyType, productType } = contactFormDefaults;
 
     return (
       <BasePage pageOptions={contactPageOptions}>
@@ -230,44 +246,20 @@ class ContactPage extends PureComponent {
                     labelText="Product Type"
                     dropDownValues={productType}
                     handleOnChange={(e) => {
-                      this.updateContactFormState(
-                        "productType",
-                        e.target.value
-                      );
+                      const productType = e.target.value;
+                      this.updateContactFormState("productType", productType);
+                      this.updateProductIDDropDownFromProductsData(productType);
                     }}
                   />,
-                  <DropdownInput
-                    labelText="Product ID"
-                    dropDownValues={productID}
-                    handleOnChange={(e) =>
-                      this.updateContactFormState("productID", e.target.value)
-                    }
-                  />,
-                ]}
-              />
-              <GridLayout
-                columns={[{ sm: 6 }, { sm: 6 }]}
-                components={[
-                  <DropdownInput
-                    labelText="Customer Type"
-                    dropDownValues={customerType}
-                    handleOnChange={(e) =>
-                      this.updateContactFormState(
-                        "customerType",
-                        e.target.value
-                      )
-                    }
-                  />,
-                  <DropdownInput
-                    labelText="Purchase Scheme After Service ?"
-                    dropDownValues={purchaseSchemeAfterService}
-                    handleOnChange={(e) =>
-                      this.updateContactFormState(
-                        "purchaseSchemeAfterService",
-                        e.target.value
-                      )
-                    }
-                  />,
+                  !hideProductIDDropdown ? (
+                    <DropdownInput
+                      labelText="Product ID"
+                      dropDownValues={productIDDropDown}
+                      handleOnChange={(e) =>
+                        this.updateContactFormState("productID", e.target.value)
+                      }
+                    />
+                  ) : null,
                 ]}
               />
               <TextFieldInput
@@ -281,7 +273,7 @@ class ContactPage extends PureComponent {
               <Button
                 className="readex-pro"
                 variant="danger"
-                onClick={() => alert(JSON.stringify(this.state.contactForm))}
+                onClick={() => console.table(contactForm)}
               >
                 Send Request
               </Button>

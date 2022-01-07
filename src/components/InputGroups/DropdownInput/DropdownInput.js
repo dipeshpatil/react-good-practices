@@ -10,7 +10,7 @@ import "../InputGroups.scss";
 
 const { isDark } = config;
 
-const DropdownInput = ({ labelText, dropDownValues = [] }) => {
+const DropdownInput = ({ labelText, dropDownValues = [], handleOnChange }) => {
   return (
     <Form.Group className="mb-3 readex-pro">
       <Form.Label className={clsx([isDark && "text-light", "readex-pro"])}>
@@ -19,6 +19,7 @@ const DropdownInput = ({ labelText, dropDownValues = [] }) => {
       <Form.Control
         className={clsx([isDark && "form-control__dark"])}
         as="select"
+        onChange={(e) => handleOnChange(e)}
         defaultValue={dropDownValues[0]}
       >
         {dropDownValues.length > 0 && (
@@ -42,6 +43,7 @@ const DropdownInput = ({ labelText, dropDownValues = [] }) => {
 DropdownInput.propTypes = {
   labelText: PropTypes.string,
   dropDownValues: PropTypes.array,
+  handleOnChange: PropTypes.func.isRequired,
 };
 
 export default DropdownInput;

@@ -67,7 +67,7 @@ class ContactPage extends Component {
         comments: "",
       },
       productIDDropDown: [],
-      hideProductIDDropdown: false,
+      hideProductIDDropdown: true,
     };
   }
 

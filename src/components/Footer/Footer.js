@@ -1,6 +1,6 @@
 import React from "react";
 import clsx from "clsx";
-import { Row, Col, Container } from "react-bootstrap";
+import { Row, Col, Container, Button } from "react-bootstrap";
 
 import Header from "../Header/Header";
 import FooterLinksListGroup from "../ListGroups/FooterLinksListGroup/FooterLinksListGroup";
@@ -22,7 +22,7 @@ const footerLinksSequence = [
 
 const iconClass = {
   darkMode: ["bi-moon-stars-fill", "dark-mode"],
-  lightMode: ["bi-lightbulb-fill", "light-mode"],
+  lightMode: ["bi-brightness-high-fill", "light-mode"],
 };
 
 const toggleDarkMode = () => {
@@ -74,22 +74,21 @@ const Footer = () => {
             );
           })}
         </div>
-        <div className="theme-toggle" onClick={() => toggleDarkMode()}>
-          <span
-            className={clsx([
-              isDark && "text-light",
-              "readex-pro",
-              "readex-pro__semi-bold",
-            ])}
+        <div className="theme-toggle">
+          <Button
+            className="readex-pro"
+            variant="danger"
+            size="sm"
+            onClick={() => toggleDarkMode()}
           >
-            {`Theme: ${isDark ? "Dark" : "Light"}`}
+            {`${isDark ? "Dark" : "Light"}`}
             <i
               className={clsx([
                 "bi",
                 isDark ? iconClass.darkMode : iconClass.lightMode,
               ])}
             />
-          </span>
+          </Button>
         </div>
         <div className="copyright">
           <span className="logo-text">IMPRIMEX</span>

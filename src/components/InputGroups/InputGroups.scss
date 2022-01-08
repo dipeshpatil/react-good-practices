@@ -1,9 +1,11 @@
-$brandColor: #dc3545;
+@import "../../colors.scss";
+
+$brandColor: $appBrandColor;
 $darkBackgroundColor: #212529;
 
 .form-control {
-  border-color: $brandColor !important;
-  border: 2px solid $brandColor !important;
+  border-color: $appBrandColor !important;
+  border: 2px solid $appBrandColor !important;
   border-radius: 7px !important;
   color: #697577 !important;
 

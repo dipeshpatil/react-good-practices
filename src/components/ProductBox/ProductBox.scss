@@ -1,4 +1,6 @@
-$normalTint: #eb3b5a;
+@import "../../colors.scss";
+
+$normalTint: $appBrandColor;
 $featuredTint: #1abc9c;
 
 .product {

@@ -84,7 +84,7 @@ class ProductsPage extends PureComponent {
                     "readex-pro",
                     "readex-pro__medium",
                     "mt-3",
-                    "text-danger",
+                    "text-brand-1",
                   ]}
                 />
                 <Row className="products">

@@ -109,7 +109,7 @@ class ContactPage extends Component {
                 "text-start",
                 "readex-pro",
                 "readex-pro__semi-bold",
-                "text-danger",
+                "text-brand-1",
               ]}
             />
             <Header
@@ -130,7 +130,7 @@ class ContactPage extends Component {
                 "text-start",
                 "comfortaa",
                 "comfortaa__semi-bold",
-                "text-danger",
+                "text-brand-1",
               ]}
             />
             <Header
@@ -151,7 +151,7 @@ class ContactPage extends Component {
                 "text-start",
                 "comfortaa",
                 "comfortaa__semi-bold",
-                "text-danger",
+                "text-brand-1",
               ]}
             />
             <Header
@@ -273,7 +273,7 @@ class ContactPage extends Component {
               />
               <Button
                 className="readex-pro"
-                variant="danger"
+                variant={isDark ? "light" : "dark"}
                 onClick={() => console.table(contactForm)}
               >
                 Send Request

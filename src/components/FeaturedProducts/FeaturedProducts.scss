@@ -1,4 +1,4 @@
-$box_shadow: #eb3b5a;
+@import "../../colors.scss";
 
 .scrollmenu {
   white-space: nowrap;
@@ -19,9 +19,9 @@ $box_shadow: #eb3b5a;
   cursor: pointer;
 
   &:hover {
-    box-shadow: 2px 1px 50px -5px $box_shadow;
-    -webkit-box-shadow: 2px 1px 50px -5px $box_shadow;
-    -moz-box-shadow: 2px 1px 50px -5px $box_shadow;
+    box-shadow: 2px 1px 50px -5px $appBrandColor;
+    -webkit-box-shadow: 2px 1px 50px -5px $appBrandColor;
+    -moz-box-shadow: 2px 1px 50px -5px $appBrandColor;
     transition: 300ms ease-in-out;
   }
 }

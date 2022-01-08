@@ -43,7 +43,7 @@ const VerticalModal = ({
     >
       <Modal.Header closeButton>
         <Modal.Title
-          className={clsx(["readex-pro", "readex-pro__medium", "text-danger"])}
+          className={clsx(["readex-pro", "readex-pro__medium", "text-brand-1"])}
         >
           {customHeader ?? defaultOptions.customHeader ? (
             <Header

@@ -1,3 +1,5 @@
+@import "../../../colors.scss";
+
 .footer-list {
   &,
   ul {
@@ -13,7 +15,7 @@
       .text-light,
       .text-dark {
         &:hover {
-          color: #eb3b5a !important;
+          color: $appBrandColor !important;
           text-decoration: underline;
         }
       }

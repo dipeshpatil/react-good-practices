@@ -81,7 +81,6 @@ const FeaturedProducts = () => {
             "readex-pro__regular",
             "featured-product-info",
             "px-4",
-            isDark && "text-light",
           ])}
           sm={8}
         >
@@ -92,10 +91,13 @@ const FeaturedProducts = () => {
               "text-start",
               "readex-pro",
               "readex-pro__medium",
+              "text-brand-1",
               isDevice && "mt-3",
             ]}
           />
-          {featuredProductInfo.description}
+          <div className={clsx([isDark && "text-light"])}>
+            {featuredProductInfo.description}
+          </div>
         </Col>
       </Row>
     </Container>

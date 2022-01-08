@@ -12,9 +12,7 @@ const { isDevice } = config;
 
 const ProductModalContent = ({ product = {} }) => {
   const { description, image, tags, featured } = product;
-  const productImage = isDark
-    ? product.image.dark ?? product.image
-    : product.image.light ?? product.image;
+  const productImage = isDark ? image.dark ?? image : image.light ?? image;
 
   return (
     <Container className={clsx(["p-2"])} fluid>

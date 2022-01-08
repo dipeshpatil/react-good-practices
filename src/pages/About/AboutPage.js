@@ -57,7 +57,7 @@ class AboutPage extends PureComponent {
               "text-start",
               "comfortaa",
               "comfortaa__medium",
-              isDark && "text-light",
+              "text-brand-1",
             ]}
           />
           <Row>

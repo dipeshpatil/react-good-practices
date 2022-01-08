@@ -46,7 +46,7 @@ const Footer = () => {
                     "text-start",
                     "comfortaa",
                     "comfortaa__bold",
-                    "text-danger",
+                    "text-brand-1",
                   ]}
                 />
                 <FooterLinksListGroup
@@ -77,7 +77,7 @@ const Footer = () => {
         <div className="theme-toggle">
           <Button
             className="readex-pro"
-            variant={!isDark ? "danger" : "light"}
+            variant={isDark ? "light" : "dark"}
             size="sm"
             onClick={() => toggleDarkMode()}
           >

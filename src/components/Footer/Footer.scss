@@ -1,3 +1,5 @@
+@import "../../colors.scss";
+
 .footer {
   padding: 30px 30px 20px 20px;
   background: #f0f0f0;
@@ -26,7 +28,7 @@
       color: #212121;
 
       &:hover {
-        color: #eb3b5a;
+        color: $appBrandColor;
         text-decoration: underline;
       }
 
@@ -57,7 +59,7 @@
 
     &:hover {
       cursor: pointer;
-      color: #eb3b5a;
+      color: $appBrandColor;
       text-decoration: underline;
     }
   }

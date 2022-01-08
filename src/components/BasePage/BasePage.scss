@@ -1,3 +1,5 @@
+@import "../../colors.scss";
+
 // $imageURL: "https://i.ibb.co/xqmtKLC/pngkey-com-sakura-tree-png-653745.png";
 
 ::-webkit-scrollbar {
@@ -7,10 +9,10 @@
 }
 
 ::-webkit-scrollbar-thumb {
-  background-color: #dc3545;
+  background-color: $appBrandColor;
   border-radius: 5px;
 }
 
 .dark-page {
-  background-color: #161616;
+  background-color: $darkColor;
 }

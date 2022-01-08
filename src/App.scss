@@ -12,6 +12,8 @@
 // Comfortaa
 @import url("https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;500;600;700&display=swap");
 
+@import "./colors.scss";
+
 html,
 body {
   font-family: "Roboto", sans-serif !important;
@@ -19,7 +21,7 @@ body {
 }
 
 .text-brand-1 {
-  color: #dc3545;
+  color: $appBrandColor;
 }
 
 .oswald {
@@ -85,7 +87,7 @@ body {
 .logo-text {
   font-family: "Oswald", sans-serif !important;
   font-weight: 600;
-  color: #dc3545 !important;
+  color: $appBrandColor !important;
   text-transform: uppercase;
 }
 

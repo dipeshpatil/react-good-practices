@@ -35,7 +35,7 @@ const NavBar = ({ links = [], navBarOptions = DEFAULT }) => {
       expand="lg"
     >
       <Container fluid>
-        <Navbar.Brand className="logo-text">
+        <Navbar.Brand href="#" className="logo-text">
           <div className="navbar-brand__info">
             <span className="navbar-brand__info-title">
               {title ?? DEFAULT.title}

@@ -21,8 +21,8 @@ const footerLinksSequence = [
 ];
 
 const iconClass = {
-  darkMode: ["bi-moon-stars-fill", "dark-mode"],
-  lightMode: ["bi-brightness-high-fill", "light-mode"],
+  darkMode: ["fa-moon", "dark-mode"],
+  lightMode: ["fa-sun", "light-mode"],
 };
 
 const toggleDarkMode = () => {
@@ -77,15 +77,15 @@ const Footer = () => {
         <div className="theme-toggle">
           <Button
             className="readex-pro"
-            variant="danger"
+            variant={!isDark ? "danger" : "light"}
             size="sm"
             onClick={() => toggleDarkMode()}
           >
-            {`${isDark ? "Dark" : "Light"}`}
+            {`${!isDark ? "Dark" : "Light"}`}
             <i
               className={clsx([
-                "bi",
-                isDark ? iconClass.darkMode : iconClass.lightMode,
+                "fas",
+                !isDark ? iconClass.darkMode : iconClass.lightMode,
               ])}
             />
           </Button>

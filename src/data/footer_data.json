@@ -76,37 +76,37 @@
         "title": "Email",
         "link": "#",
         "show": true,
-        "icon": "envelope-fill"
+        "icon": "fas fa-envelope-open"
       },
       {
         "title": "Facebook",
         "link": "#",
         "show": true,
-        "icon": "facebook"
+        "icon": "fab fa-facebook"
       },
       {
         "title": "Instagram",
         "link": "#",
         "show": true,
-        "icon": "instagram"
+        "icon": "fab fa-instagram"
       },
       {
         "title": "WhatsApp",
         "link": "#",
         "show": true,
-        "icon": "whatsapp"
+        "icon": "fab fa-whatsapp"
       },
       {
         "title": "Twitter",
         "link": "#",
         "show": true,
-        "icon": "twitter"
+        "icon": "fab fa-twitter"
       },
       {
         "title": "LinkedIn",
         "link": "#",
         "show": true,
-        "icon": "linkedin"
+        "icon": "fab fa-linkedin"
       }
     ]
   },

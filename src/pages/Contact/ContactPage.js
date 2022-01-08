@@ -51,6 +51,7 @@ const productCategoryMapping = {
   "Projectors/Whiteboards": "visual_communications",
   "Allow Us To Help You Decide": "none",
 };
+
 class ContactPage extends Component {
   constructor(props) {
     super(props);

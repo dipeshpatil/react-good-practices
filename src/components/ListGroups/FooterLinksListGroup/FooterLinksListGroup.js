@@ -23,13 +23,14 @@ const FooterLinksListGroup = ({ listType, listData = [] }) => {
     <DispatchListGroupType type={listType}>
       {listData.map((listItem, idx) => {
         const { title, link, show, icon } = listItem;
+        console.log(icon);
 
         return (
           show && (
             <li key={idx}>
               {(icon ?? false) && (
                 <span>
-                  <i className={clsx(["bi", `bi-${icon}`, "social-icon"])}></i>
+                  <i className={clsx([`${icon}`, "social-icon"])}></i>
                 </span>
               )}
               <a

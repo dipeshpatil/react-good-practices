@@ -23,7 +23,6 @@ const FooterLinksListGroup = ({ listType, listData = [] }) => {
     <DispatchListGroupType type={listType}>
       {listData.map((listItem, idx) => {
         const { title, link, show, icon } = listItem;
-        console.log(icon);
 
         return (
           show && (

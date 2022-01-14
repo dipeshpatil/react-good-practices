@@ -17,9 +17,7 @@ const ProductBox = ({
 }) => {
   const isFeatured = product.featured;
   const isFeaturedAndTintNotDisabled = isFeatured && !disableFeatureTint;
-  const productImage = isDark
-    ? product.image.dark ?? product.image
-    : product.image.light ?? product.image;
+  const productImage = isDark ? product.image.dark : product.image.light;
 
   return (
     <div className="product" onClick={() => handleClick(product)}>

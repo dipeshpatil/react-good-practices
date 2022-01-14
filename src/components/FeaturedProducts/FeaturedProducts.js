@@ -69,8 +69,8 @@ const FeaturedProducts = () => {
               className="featured-product-image"
               src={
                 isDark
-                  ? featuredProductInfo.image.dark ?? featuredProductInfo.image
-                  : featuredProductInfo.image.light ?? featuredProductInfo.image
+                  ? featuredProductInfo.image.dark
+                  : featuredProductInfo.image.light
               }
             />
           </center>
